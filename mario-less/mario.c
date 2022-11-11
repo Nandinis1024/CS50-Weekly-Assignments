@@ -6,5 +6,7 @@ int main(void)
     int height;
     printf("enter height:\n");
     scanf("%d",&height);
-    printf("%d",height);
+    if(height>=1&&height<=8){
+        
+    }
 }
