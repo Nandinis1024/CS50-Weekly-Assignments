@@ -1,5 +1,6 @@
 #include<stdio.h>
 int main(void)
 {
-    printf("hello,world\n");
+    printf("what is your name?\n");
+    
 }
