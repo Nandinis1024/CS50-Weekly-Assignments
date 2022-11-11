@@ -5,5 +5,6 @@ int main(void)
 {
     int height;
     printf("enter height:\n");
-    scanf()
+    scanf(%d,&height);
+    printf("%d",height);
 }
