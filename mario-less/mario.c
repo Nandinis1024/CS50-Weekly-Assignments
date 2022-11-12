@@ -6,13 +6,14 @@ int main(void)
     int height;
     printf("enter height:\n");
     scanf("%d",&height);
-    while(true){
+
     if(height<=1||height>=8){
+      while(true){
       printf("enter height:\n");
       scanf("%d",&height);
+      }
     }
     else{
         printf("bhsd  \n");
-    }
     }
 }
