@@ -19,7 +19,7 @@ int main(void)
     }
     }
     for(int row=1;row<=height;row++){
-      for(int col=height;col;col++){
+      for(int col=height;col>=row;col--){
 
       }
     }
