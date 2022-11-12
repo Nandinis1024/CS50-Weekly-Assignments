@@ -21,11 +21,11 @@ int main(void)
 
 
     int stored= height;
-   for(int i=1;i<=stored;i++){
+           for(int i=1;i<=stored;i++){
     for(int j=1;j<=(stored-i);j++){
       printf(" ");
     }
-    int k=1;
+      int k=1;
     for(;k<=i;k++){
       printf("#");
     }
