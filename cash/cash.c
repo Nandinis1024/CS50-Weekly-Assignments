@@ -3,7 +3,7 @@
 
 int get_cents(void){
     int cents;
-    scanf("%d",cents);
+    scanf("%d");
     while(true){
         if(cents<0){
           printf("input again\n");
