@@ -39,8 +39,18 @@ int main(void)
 
 int get_cents(void)
 {   int cents;
+    scanf("%d",&cents);
+    while(true){
+        if(cents<0){
+            printf("again\n");
+            scanf("%d",&cents);
+        }
+        else{
+            break;
+        }
+    }
     // TODO
-    return 0;
+    return cents;
 }
 
 int calculate_quarters(int cents)
