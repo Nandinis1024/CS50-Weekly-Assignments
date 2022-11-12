@@ -33,7 +33,7 @@ int main(void)
     for(;m<=2;m++){
         printf(" ");
     }
-    int n=1;
+        int n=1;
     for(;n<=i;n++){
         printf("#");
     }
