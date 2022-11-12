@@ -25,9 +25,9 @@ int main(void)
         printf(" ");
       }
       printf("\n");
-    }
+
     int k=1;
-    for( ;i<=height;i++){
+
       for(;k<=i;k++){
         printf("#");
       }
