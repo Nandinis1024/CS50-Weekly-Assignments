@@ -19,6 +19,11 @@ int main(void)
     }
     }
     printf("There you go Maro!\n");
-   
+   for(int i=1;i<=height;i++){
+    for(int j=1;j<=(height-i);j++){
+      printf(".");
+    }
+    printf("\n");
+   }
 
 }
