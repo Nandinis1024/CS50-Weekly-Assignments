@@ -43,15 +43,11 @@ int get_cents(void)
 {   int cents;
     printf("how many cents the customer is owed?\n");
     scanf("%d",&cents);
-    while(true){
-        if(cents<0){
-            printf("how many cents the customer is owed?\n");
-            scanf("%d",&cents);
-        }
-        else{
-            break;
-        }
-    }
+    do{
+         printf("how many cents the customer is owed?\n");
+         scanf("%d",&cents);
+    }while(cents<0);
+    
     // TODO
     return cents;
 }
