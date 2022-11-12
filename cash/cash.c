@@ -35,7 +35,7 @@ int main(void)
     int coins = quarters + dimes + nickels + pennies;
 
     // Print total number of coins to give the customer
-   // printf("%i\n", coins);
+    printf("%i\n", coins);
 }
 
 int get_cents(void)
@@ -69,11 +69,11 @@ int calculate_dimes(int cents)
 int calculate_nickels(int cents)
 {
     // TODO
-    return 0;
+    return cents/5;
 }
 
 int calculate_pennies(int cents)
 {
     // TODO
-    return 0;
+    return cents/1;
 }
