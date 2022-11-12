@@ -26,8 +26,9 @@ int main(void)
       }
       printf("\n");
     }
+    int k=1;
     for( ;i<=height;i++){
-      for(;j<=i;j++){
+      for(;k<=i;k++){
         printf("#");
       }
       printf("\n");
