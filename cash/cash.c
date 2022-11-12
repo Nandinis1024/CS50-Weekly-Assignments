@@ -7,7 +7,7 @@ int get_cents(void){
     while(true){
         if(cents<0){
           printf("input again\n");
-          scanf("%d",cents);
+          scanf("%d",&cents);
         }
         else{
             break;
