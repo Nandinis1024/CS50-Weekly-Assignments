@@ -13,8 +13,10 @@ int main(void)
       scanf("%d",&height);
 
     }
-    }
+
     else{
-        printf("bhsd  \n");
+       break;
     }
+    }
+    
 }
