@@ -18,9 +18,5 @@ int main(void)
        break;
     }
     }
-    for(int row=1;row<=height;row++){
-      for(int col=height;col>=row;col--){
-
-      }
-    }
+    for()
 }
