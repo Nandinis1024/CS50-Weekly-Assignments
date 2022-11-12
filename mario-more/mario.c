@@ -3,7 +3,7 @@
 
 int main(void)
 {
-     int height;
+    int height;
     printf("enter height:\n");
     scanf("%d",&height);
     while(true){
