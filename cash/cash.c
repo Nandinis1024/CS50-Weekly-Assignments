@@ -44,7 +44,7 @@ int get_cents(void)
     printf("how many cents the customer is owed?\n");
     scanf("%d",&cents);
     while(true){
-        if(cents<0){
+        if(cents<0||scanf("%d",&cents)!=1){
             printf("how many cents the customer is owed?\n");
             scanf("%d",&cents);
         }
