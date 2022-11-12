@@ -18,9 +18,11 @@ int main(void)
        break;
     }
     }
-    printf("There you go Maro!\n");
-   for(int i=1;i<=height;i++){
-    for(int j=1;j<=(height-i);j++){
+
+    printf("your input is stored!\n");
+    int stored= height;
+   for(int i=1;i<=stored;i++){
+    for(int j=1;j<=(stored-i);j++){
       printf(" ");
     }
     int k=1;
