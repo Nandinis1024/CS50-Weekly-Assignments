@@ -9,7 +9,7 @@ int main(void)
     while(true){
     if(height<1||height>8){
 
-      printf("enter height:\n");
+      printf("OOPS WRONG INPUT,enter height AGAIN:\n");
       scanf("%d",&height);
 
     }
@@ -18,7 +18,18 @@ int main(void)
        break;
     }
     }
+    printf("There you go Maro!\n");
     for(int i=1;i<=height;i++){
-      for(int j=1;j<=(height-i)+1;j++)
+      for(int j=1;j<=(height-i)+1;j++){
+        printf(" ");
+      }
+      printf("\n");
     }
+    for(int i=1;i<=height;i++){
+      for(int j=1;j<=i;j++){
+        printf("#");
+      }
+      printf("\n");
+    }
+
 }
