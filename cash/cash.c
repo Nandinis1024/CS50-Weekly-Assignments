@@ -1,5 +1,6 @@
 #include <cs50.h>
 #include <stdio.h>
+#include<ctype.h>
 
 int get_cents(void);
 int calculate_quarters(int cents);
@@ -42,7 +43,7 @@ int get_cents(void)
 {   int cents;
     scanf("%d",&cents);
     while(true){
-        if(cents<0){
+        if(cents<0||cents=isalpha()){
             printf("how many cents the customer is owed?\n");
             scanf("%d",&cents);
         }
