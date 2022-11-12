@@ -1,23 +1,8 @@
 #include <cs50.h>
 #include <stdio.h>
 
-int get_cents(void){
-    int cents;
-    scanf("%d",&cents);
-    while(true){
-        if(cents<0){
-          printf("input again\n");
-          scanf("%d",&cents);
-        }
-        else{
-            break;
-        }
-    }
-    return cents;
-}
-int calculate_quarters(int cents){
-
-}
+int get_cents(void);
+int calculate_quarters(int cents);
 int calculate_dimes(int cents);
 int calculate_nickels(int cents);
 int calculate_pennies(int cents);
@@ -53,7 +38,7 @@ int main(void)
 }
 
 int get_cents(void)
-{
+{   int cents;
     // TODO
     return 0;
 }
