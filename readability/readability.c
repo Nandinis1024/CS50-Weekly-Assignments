@@ -23,7 +23,7 @@ printf("sentences: %d\n",sentences);
 //formula
 int L=(letters/words)*100;
 int S=(sentences/words)*100;
-int index = 0.0588 * L - 0.296 * S - 15.8;
+int index = (0.0588 * L) - (0.296 * S) - 15.8;
 printf("Grade: %d\n",index);
 }
 
