@@ -22,10 +22,13 @@ int main(void)
 }
 
 int compute_score(string word)
-{   int length=strlen(word);
+{   int score=0;
+    int length=strlen(word);
     for(int i=0;i<length;i++){
         char c=word[i];
-        
+        int t=POINTS[c-65];
+        score=score+t;
     }
+    return score;
     // TODO: Compute and return score for string
 }
