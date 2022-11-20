@@ -85,18 +85,18 @@ int main(void)
     {
     //this function counts and returns the number of sentences to the main function
     int count=0;
-int length = strlen(text);
-for(int i=0;i<length;i++)
-{   char c=text[i];
-   if(c == '.'||c == '!'||c == '?')
-   {
-    count++;
-   }
-   else
-   {
-    continue;
-   }
-}
-return count;
+    int length = strlen(text);
+    for(int i=0;i<length;i++)
+    {   char c=text[i];
+       if(c == '.'||c == '!'||c == '?')
+       {
+        count++;
+       }
+       else
+       {
+        continue;
+       }
+    }
+    return count;
 
-}
+    }
