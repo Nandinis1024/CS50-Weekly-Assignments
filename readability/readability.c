@@ -4,7 +4,7 @@
 #include <ctype.h>
 
 int count_letters(string text);
-
+int count_words(string text);
 
 
 int main(void)
@@ -12,7 +12,8 @@ int main(void)
 string text = get_string("text: ");
 //count the number of letters
 int letters = count_letters(text);
-printf("%d\n",letters);
+//count the number of words
+int words = count_words(text);
 
 }
 
@@ -34,4 +35,12 @@ for(int i=0;i<length;i++)
     }
 }
 return count;
+}
+
+
+int count_words(string text)
+{
+    //this function counts and returns the number of words to the main function
+    
+
 }
