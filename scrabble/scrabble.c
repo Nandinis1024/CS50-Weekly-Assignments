@@ -18,25 +18,25 @@ int main(void)
     int score1 = compute_score(word1);
     int score2 = compute_score(word2);
     if(score1>score2){
-        printf("player 1 wins!");
+        printf("player 1 wins!\n");
 
     }
     else{
-        printf("player 2 wins!");
+        printf("player 2 wins!\n");
     }
     // TODO: Print the winner
 }
 
 int compute_score(string word)
-{   int score=0;
+{   int score,t=0;
     int length=strlen(word);
     for(int i=0;i<length;i++){
         char c=word[i];
         if(isupper(c)){
-        int t=POINTS[c-65];
+        t=POINTS[c-65];
         }
         else if(islower(c)){
-        int t=POINTS[c-97];
+         t=POINTS[c-97];
         }
         else{
             t=0;
