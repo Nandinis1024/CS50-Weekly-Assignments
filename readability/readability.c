@@ -70,15 +70,15 @@ float count_words(string text)
     int length = strlen(text);
     for (int i = 0; i < length; i++)
     {
-       char c = text[i];
-       if(c == ' ')
-       {
-           count++;
-       }
-       else
-       {
-           continue;
-       }
+        char c = text[i];
+        if (c == ' ')
+        {
+            count++;
+        }
+        else
+        {
+            continue;
+        }
     }
     return count + 1;
 
