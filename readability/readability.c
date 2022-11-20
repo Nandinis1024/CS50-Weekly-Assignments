@@ -90,7 +90,7 @@ float count_sentences(string text)
     int length = strlen(text);
     for (int i = 0; i < length; i++)
     {
-       char c=text[i];
+       char c = text[i];
        if (c == '.' || c == '!' || c == '?')
        {
            count++;
