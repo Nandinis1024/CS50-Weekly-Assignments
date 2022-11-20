@@ -41,6 +41,6 @@ return count;
 int count_words(string text)
 {
     //this function counts and returns the number of words to the main function
-    
+    for(int i=0,i<)
 
 }
