@@ -4,6 +4,8 @@
 int main(void)
 {
 string text = get_string("text: ");
-printf("%s\n",text);
+//count the number of letters
+int letters=
+
 
 }
