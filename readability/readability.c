@@ -10,22 +10,22 @@ float count_sentences(string text);
 
 int main(void)
 {
-string text = get_string("text: ");
+    string text = get_string("text: ");
 //count the number of letters
-float letters = count_letters(text);
+    float letters = count_letters(text);
 
 //count the number of words
-float words = count_words(text);
+    float words = count_words(text);
 
 //count the number of sentences
-float sentences = count_sentences(text);
+    float sentences = count_sentences(text);
 
 
 //formula
-float L=letters/words*100;
-float S=sentences/words*100;
-float index = (0.0588 * L) - (0.296 * S) - 15.8;
-int grade = round(index);
+    float L=letters/words*100;
+    float S=sentences/words*100;
+    float index = (0.0588 * L) - (0.296 * S) - 15.8;
+    int grade = round(index);
 if(grade<1)
 {
     printf("Before Grade 1\n");
