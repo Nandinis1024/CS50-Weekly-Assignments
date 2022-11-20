@@ -3,5 +3,7 @@
 
 int main(void)
 {
-string text=
+string text = get_string("text: ");
+printf("%s\n",text);
+
 }
