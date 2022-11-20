@@ -41,6 +41,19 @@ return count;
 int count_words(string text)
 {
     //this function counts and returns the number of words to the main function
-    for(int i=0,i<)
+    int count=0;
+int length = strlen(text);
+for(int i=0;i<length;i++)
+{   char c=text[i];
+    if(isalpha(c))
+    {
+      count++;
+    }
+    else
+    {
+     continue;
+    }
+}
+return count;
 
 }
