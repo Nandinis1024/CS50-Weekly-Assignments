@@ -42,20 +42,21 @@ int main(void)
 }
 
 
-    float count_letters(string text)
-    {
+float count_letters(string text)
+{
     //this function counts and returns the number of letters in a text to the main function
-    int count=0;
+    int count =  0;
     int length = strlen(text);
-    for(int i=0;i<length;i++)
-    {   char c=text[i];
-        if(isalpha(c))
+    for(int i = 0; i < length; i++)
+    {
+        char c = text[i];
+        if (isalpha(c))
         {
-          count++;
+            count++;
         }
         else
         {
-         continue;
+            continue;
         }
     }
     return count;
