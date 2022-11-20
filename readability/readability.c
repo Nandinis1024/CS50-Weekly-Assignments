@@ -12,8 +12,10 @@ int main(void)
 string text = get_string("text: ");
 //count the number of letters
 int letters = count_letters(text);
+printf("letters: %d\n",letters);
 //count the number of words
 int words = count_words(text);
+printf("words: %d\n",words);
 
 }
 
@@ -45,14 +47,14 @@ int count_words(string text)
 int length = strlen(text);
 for(int i=0;i<length;i++)
 {   char c=text[i];
-    if(isalpha(c))
-    {
-      count++;
-    }
-    else
-    {
-     continue;
-    }
+   if(c==" ")
+   {
+    count++;
+   }
+   else
+   {
+    continue;
+   }
 }
 return count;
 
