@@ -67,17 +67,17 @@ int main(void)
     //this function counts and returns the number of words to the main function
         int count=0;
     int length = strlen(text);
-for(int i=0;i<length;i++)
-{   char c=text[i];
-   if(c==' ')
-   {
-    count++;
-   }
-   else
-   {
-    continue;
-   }
-}
+    for(int i=0;i<length;i++)
+    {   char c=text[i];
+       if(c==' ')
+       {
+        count++;
+       }
+       else
+       {
+        continue;
+       }
+    }
 return count+1;
 
 }
