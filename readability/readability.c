@@ -19,6 +19,10 @@ printf("words: %d\n",words);
 //count the number of sentences
 int sentences = count_sentences(text);
 printf("sentences: %d\n",sentences);
+
+//formula
+int index = 0.0588 * ((letters/words)*100) - 0.296 * ((sentences/words)*100) - 15.8;
+printf("Grade: %d\n",index);
 }
 
 
