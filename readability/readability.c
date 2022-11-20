@@ -80,25 +80,26 @@ float count_words(string text)
            continue;
        }
     }
-    return count+1;
+    return count + 1;
 
-    }
-    float count_sentences(string text)
-    {
+}
+float count_sentences(string text)
+{
     //this function counts and returns the number of sentences to the main function
-    int count=0;
+    int count = 0;
     int length = strlen(text);
-    for(int i=0;i<length;i++)
-    {   char c=text[i];
-       if(c == '.'||c == '!'||c == '?')
+    for (int i = 0; i < length; i++)
+    {
+       char c=text[i];
+       if (c == '.' || c == '!' || c == '?')
        {
-        count++;
+           count++;
        }
        else
        {
-        continue;
+           continue;
        }
     }
     return count;
 
-    }
+}
