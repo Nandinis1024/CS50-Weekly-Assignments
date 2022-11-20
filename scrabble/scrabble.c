@@ -28,7 +28,7 @@ int main(void)
 }
 
 int compute_score(string word)
-{   int score,t=0;
+{   int t,score=0;
     int length=strlen(word);
     for(int i=0;i<length;i++){
         char c=word[i];
