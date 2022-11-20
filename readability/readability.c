@@ -11,14 +11,14 @@ int main(void)
 {
 string text = get_string("text: ");
 //count the number of letters
-int letters = count_letters(text);
-printf("letters: %d\n",letters);
+float letters = count_letters(text);
+printf("letters: %f\n",letters);
 //count the number of words
-int words = count_words(text);
-printf("words: %d\n",words);
+float words = count_words(text);
+printf("words: %f\n",words);
 //count the number of sentences
-int sentences = count_sentences(text);
-printf("sentences: %d\n",sentences);
+float sentences = count_sentences(text);
+printf("sentences: %f\n",sentences);
 
 //formula
 float L=letters/words*100;
@@ -28,7 +28,7 @@ printf("Grade: %f\n",L);
 }
 
 
-int count_letters(string text)
+float count_letters(string text)
 {
     //this function counts and returns the number of letters in a text to the main function
 int count=0;
@@ -48,7 +48,7 @@ return count;
 }
 
 
-int count_words(string text)
+float count_words(string text)
 {
     //this function counts and returns the number of words to the main function
     int count=0;
@@ -67,7 +67,7 @@ for(int i=0;i<length;i++)
 return count+1;
 
 }
-int count_sentences(string text)
+float count_sentences(string text)
 {
     //this function counts and returns the number of sentences to the main function
     int count=0;
