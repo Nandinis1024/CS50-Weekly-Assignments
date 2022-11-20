@@ -2,6 +2,7 @@
 #include <stdio.h>
 #include <string.h>
 #include <ctype.h>
+#include<math.h>
 
 float count_letters(string text);
 float count_words(string text);
@@ -23,8 +24,9 @@ float sentences = count_sentences(text);
 //formula
 float L=letters/words*100;
 float S=sentences/words*100;
-int index = (0.0588 * L) - (0.296 * S) - 15.8;
-printf("Grade: %d\n",index);
+float index = (0.0588 * L) - (0.296 * S) - 15.8;
+int grade = round(index);
+printf("Grade: %d\n",grade);
 }
 
 
