@@ -3,9 +3,9 @@
 #include <string.h>
 #include <ctype.h>
 
-int count_letters(string text);
-int count_words(string text);
-int count_sentences(string text);
+float count_letters(string text);
+float count_words(string text);
+float count_sentences(string text);
 
 int main(void)
 {
@@ -22,9 +22,9 @@ printf("sentences: %f\n",sentences);
 
 //formula
 float L=letters/words*100;
-int S=sentences/words*100;
+float S=sentences/words*100;
 int index = (0.0588 * L) - (0.296 * S) - 15.8;
-printf("Grade: %f\n",L);
+printf("Grade: %d\n",index);
 }
 
 
