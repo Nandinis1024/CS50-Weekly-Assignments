@@ -12,13 +12,13 @@ int main(void)
 string text = get_string("text: ");
 //count the number of letters
 float letters = count_letters(text);
-printf("letters: %f\n",letters);
+
 //count the number of words
 float words = count_words(text);
-printf("words: %f\n",words);
+
 //count the number of sentences
 float sentences = count_sentences(text);
-printf("sentences: %f\n",sentences);
+
 
 //formula
 float L=letters/words*100;
