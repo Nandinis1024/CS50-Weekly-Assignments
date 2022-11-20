@@ -56,6 +56,6 @@ for(int i=0;i<length;i++)
     continue;
    }
 }
-return count;
+return count+1;
 
 }
