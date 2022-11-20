@@ -60,7 +60,7 @@ float count_letters(string text)
         }
     }
     return count;
-    }
+}
 
 
     float count_words(string text)
