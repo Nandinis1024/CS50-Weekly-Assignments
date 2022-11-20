@@ -78,11 +78,11 @@ int main(void)
         continue;
        }
     }
-return count+1;
+    return count+1;
 
-}
-float count_sentences(string text)
-{
+    }
+    float count_sentences(string text)
+    {
     //this function counts and returns the number of sentences to the main function
     int count=0;
 int length = strlen(text);
