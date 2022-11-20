@@ -28,12 +28,12 @@ float index = (0.0588 * L) - (0.296 * S) - 15.8;
 int grade = round(index);
 if(grade<1)
 {
-    printf("Before grade 1");
+    printf("Before grade 1\n");
 
 }
 else if(grade>16)
 {
-    printf("Grade 16+");
+    printf("Grade 16+\n");
 }
 else
 {
