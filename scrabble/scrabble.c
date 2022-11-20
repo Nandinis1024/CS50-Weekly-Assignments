@@ -32,7 +32,16 @@ int compute_score(string word)
     int length=strlen(word);
     for(int i=0;i<length;i++){
         char c=word[i];
+        if(isupper(c)){
         int t=POINTS[c-65];
+        }
+        else if(islower(c)){
+        int t=POINTS[c-97];
+        }
+        else{
+            t=0;
+        }
+
         score=score+t;
     }
     return score;
