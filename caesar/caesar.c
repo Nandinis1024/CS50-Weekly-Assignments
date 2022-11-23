@@ -9,25 +9,25 @@ if(argc == 2||isdigit(*argv[1]))
 {
     int key = atoi(argv[1]);
     string plaintext = get_string("plaintext:  ");
+    printf("ciphertext: ");
     int length = strlen(plaintext);
     for(int i = 0; i < length; i++)
     {
         char c = plaintext[i];
         if(islower(c))
         {
-
-
-           printf("%c",(((c-'a')+ key)%26)+'a');
+            printf("%c",(((c-'a')+ key)%26)+'a');
 
         }
-        /*else if(isupper(c))
+        else if(isupper(c))
         {
+            printf("%c",(((c-'A')+ key)%26)+'A');
 
         }
         else
         {
-
-        }*/
+            printf("%c",c);
+        }
     }
 
 
