@@ -19,8 +19,7 @@ for(int i = 0; argv[1][i]!='\0'; i++)
 
     }
 }
-else
-{
+
     int key = atoi(argv[1]);
     string plaintext = get_string("plaintext:  ");
     printf("ciphertext: ");
@@ -48,6 +47,6 @@ else
 
     return 0;
 
-}
+
 
 }
