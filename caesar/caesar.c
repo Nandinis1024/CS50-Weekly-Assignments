@@ -13,9 +13,11 @@ if(argc == 2||isdigit(*argv[1]))
     for(int i = 0; i < length; i++)
     {
         int c1 = plaintext[i];
-        if(islower(c))
+        if(islower(c1))
         {
-            int c2 = ((c-97)+key)%26;
+            int c2 = ((c1-97)+key)%26;
+            char c  = c2;
+            printf("%c",c);
         }
     }
 
