@@ -12,7 +12,7 @@ if(argc == 2||isdigit(*argv[1]))
     int length = strlen(plaintext);
     for(int i = 0; i < length; i++)
     {
-        int ciphertext[i]=
+        plaintext[i]= 
     }
 
 
