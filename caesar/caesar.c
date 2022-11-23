@@ -3,5 +3,8 @@
 
 int main(int argc, string argv[])
 {
-printf("%s\n",argv[1]);
+if(argc!=2)
+{
+    printf
+}
 }
