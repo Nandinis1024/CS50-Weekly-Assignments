@@ -12,7 +12,11 @@ if(argc == 2||isdigit(*argv[1]))
     int length = strlen(plaintext);
     for(int i = 0; i < length; i++)
     {
-        plaintext[i]= 
+        int c = plaintext[i];
+        if(islower(c))
+        {
+            
+        }
     }
 
 
