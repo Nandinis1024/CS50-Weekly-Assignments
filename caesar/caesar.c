@@ -16,7 +16,15 @@ if(argc == 2||isdigit(*argv[1]))
         if(islower(c))
         {
 
-            printf("%c",c);
+
+        }
+        else if(isupper(c))
+        {
+
+        }
+        else
+        {
+            
         }
     }
 
