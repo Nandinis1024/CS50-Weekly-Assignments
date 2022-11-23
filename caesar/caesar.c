@@ -5,7 +5,7 @@
 #include <stdlib.h>
 int main(int argc, string argv[])
 {
-if(argc == 2||isdigit(*argv[1]))
+if(argc == 2 && isdigit(*argv[1]))
 {
     int key = atoi(argv[1]);
     string plaintext = get_string("plaintext:  ");
@@ -34,7 +34,7 @@ if(argc == 2||isdigit(*argv[1]))
 
     return 0;
 }
-else if(argc != 2)
+else
 {
     printf("Usage: ./caesar key\n");
     return 1;
