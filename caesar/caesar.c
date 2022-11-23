@@ -11,7 +11,7 @@ if(argc!=2)
     return 1;
 }
 
-else if(isdigit(argv[1]))
+else if(isdigit(*argv[1]))
 {
     printf("%s\n",argv[1]);
 }
