@@ -11,8 +11,14 @@ if(argc!=2)
     return 1;
 }
 
-else if(isdigit(*argv[1]))
+else if(isdigit(*argv[1]=1))
 {
     printf("%s\n",argv[1]);
+    return 0;
+}
+else
+{
+    printf("Usage: ./caesar key\n");
+    return 1;
 }
 }
