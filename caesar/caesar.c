@@ -12,10 +12,10 @@ if(argc == 2||isdigit(*argv[1]))
     int length = strlen(plaintext);
     for(int i = 0; i < length; i++)
     {
-        int c = plaintext[i];
+        int c1 = plaintext[i];
         if(islower(c))
         {
-            (c-97)
+            int c2 = ((c-97)+key)%26;
         }
     }
 
