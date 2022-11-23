@@ -11,4 +11,7 @@ if(argc!=2)
 }
 
 else if(isdigit(atoi(argv[1])))
+{
+    printf("%s\n",argv[1]);
+}
 }
