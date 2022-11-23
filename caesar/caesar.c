@@ -4,7 +4,7 @@
 #include <string.h>
 int main(int argc, string argv[])
 {
-if(argc!=2||argv[1]!= int)
+if(argc!=2|| argv[1]== int)
 {
     printf("Usage: ./caesar key\n");
     return 1;
