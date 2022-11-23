@@ -15,7 +15,7 @@ if(argc == 2||isdigit(*argv[1]))
         int c = plaintext[i];
         if(islower(c))
         {
-            
+            (c-97)
         }
     }
 
