@@ -8,6 +8,7 @@ if(argc!=2)
     printf("Usage: ./caesar key\n");
     return 1;
 }
+
 else
 {
     printf("%s\n",argv[1]);
