@@ -15,17 +15,17 @@ if(argc == 2||isdigit(*argv[1]))
         char c = plaintext[i];
         if(islower(c))
         {
-
+           
 
         }
-        else if(isupper(c))
+        /*else if(isupper(c))
         {
 
         }
         else
         {
-            
-        }
+
+        }*/
     }
 
 
