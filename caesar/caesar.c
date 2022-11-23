@@ -32,9 +32,9 @@ int main(int argc, string argv[])
             printf("%c", (((c - 'a') + key) % 26) + 'a');
 
         }
-        else if(isupper(c))
+        else if (isupper(c))
         {
-            printf("%c", (((c - 'A') + key) %26) + 'A');
+            printf("%c", (((c - 'A') + key) % 26) + 'A');
 
         }
         else
