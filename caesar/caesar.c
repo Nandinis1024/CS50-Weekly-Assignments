@@ -29,6 +29,7 @@ if(argc == 2||isdigit(*argv[1]))
             printf("%c",c);
         }
     }
+    printf("\n");
 
 
     return 0;
