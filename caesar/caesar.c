@@ -12,11 +12,11 @@ if(argc == 2||isdigit(*argv[1]))
     int length = strlen(plaintext);
     for(int i = 0; i < length; i++)
     {
-        int c1 = plaintext[i];
-        if(islower(c1))
+        char c = plaintext[i];
+        if(islower(c))
         {
-            char c2 = ((c1-97)+key)%26;
-            printf("%c",c2);
+
+            printf("%c",c);
         }
     }
 
