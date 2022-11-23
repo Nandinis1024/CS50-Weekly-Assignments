@@ -9,7 +9,7 @@ if(argc!=2||)
     printf("Usage: ./caesar key\n");
     return 1;
 }
-int len = strlen(ar)
+
 else
 {
     printf("%s\n",argv[1]);
