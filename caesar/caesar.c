@@ -9,7 +9,11 @@ if(argc == 2||isdigit(*argv[1]))
 {
     int key = atoi(argv[1]);
     string plaintext = get_string("plaintext:  ");
-    
+    int length = strlen(plaintext);
+    for(int i = 0; i < length; i++)
+    {
+        int ciphertext[i]=
+    }
 
 
     return 0;
