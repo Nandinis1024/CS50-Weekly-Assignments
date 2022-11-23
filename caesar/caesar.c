@@ -10,7 +10,15 @@ if(argc != 2)
     printf("Usage: ./caesar key\n");
     return 1;
 }
-else if()
+for(int i = 0; argv[1][i]!='\0'; i++)
+{
+    if(isdigit(argv[1][i])==0)
+    {
+        printf("Usage: ./caesar key\n");
+        return 1;
+
+    }
+}
 else
 {
     int key = atoi(argv[1]);
