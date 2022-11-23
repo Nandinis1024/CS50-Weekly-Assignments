@@ -15,9 +15,8 @@ if(argc == 2||isdigit(*argv[1]))
         int c1 = plaintext[i];
         if(islower(c1))
         {
-            int c2 = ((c1-97)+key)%26;
-            char c  = c2;
-            printf("%c",c);
+            char c2 = ((c1-97)+key)%26;
+            printf("%c",c2);
         }
     }
 
