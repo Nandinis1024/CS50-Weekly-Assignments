@@ -34,10 +34,9 @@ if(argc == 2||isdigit(*argv[1]))
 
     return 0;
 }
-else
+else if(argc != 2)
 {
     printf("Usage: ./caesar key\n");
-    return 1;
 }
 
 }
