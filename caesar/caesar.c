@@ -16,7 +16,8 @@ if(argc == 2||isdigit(*argv[1]))
         if(islower(c))
         {
            int t = (c-97)+ key;
-           printf("%d",t);
+           char c2 = t;
+           printf("%c",c2);
 
         }
         /*else if(isupper(c))
