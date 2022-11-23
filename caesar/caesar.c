@@ -5,9 +5,13 @@
 #include <stdlib.h>
 int main(int argc, string argv[])
 {
-if(argc==2||isdigit(*argv[1]))
+if(argc == 2||isdigit(*argv[1]))
 {
-    printf("%s\n",argv[1]);
+    int key = atoi(argv[1]);
+    string plaintext = get_string()
+
+    //printf("%d\n",key);
+
     return 0;
 }
 else
