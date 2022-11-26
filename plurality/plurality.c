@@ -86,8 +86,16 @@ void print_winner(void)
         candidates[i].votes ++;
     }
    }
-   
+
+   int max=0;
+   for(i=0;i<candidate_count;i++)
+   {
+    if(candidates[i].votes>max)
+    {
+        max=candidates[i].votes;
+    }
+   }
 
 
-    return;
+    return max;
 }
