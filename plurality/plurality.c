@@ -97,5 +97,5 @@ void print_winner(void)
    }
 
 
-    return max;
+    return candidates[i].name;
 }
