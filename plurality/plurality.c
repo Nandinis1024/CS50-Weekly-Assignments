@@ -81,7 +81,7 @@ void print_winner(void)
 {
     for(int i=0;i<candidate_count;i++)
    {
-    if(strcmp(candidates[i].name, name))
+    if(strcmp(candidates[i].name))
     {
         candidates[i].votes ++;
     }
