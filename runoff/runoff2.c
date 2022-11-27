@@ -15,8 +15,11 @@ typedef struct
 }
 candidate;
 
+candidate candidates[MAX_CANDIDATES];
+
 int voters_count;
 int candidates_count;
+
 
 
 int main(int argc, string argv[])
@@ -34,7 +37,22 @@ int main(int argc, string argv[])
     }
     for (int i = 0; i < candidates_count; i++)
     {
-        candidates[i].
+        candidates[i].name = argv[i+1];
+        candidates[i].votes = 0;
+        candidates[i].eliminated = false;
+    }
+    voters_count = gent_int("number of voters is: ");
+    if (voters_count > MAX_VOTERS)
+    {
+        printf("Maximum number of voters is %i\n", MAX_VOTERS);
+        return 3;
+    }
+    for (int i = 0; i < voters_count; i++)
+    {
+        for (int j = 0; j < candidates_count; j++)
+        {
+            string name = get_string("rank %i is: ", j + 1);
+        }
     }
 
 
