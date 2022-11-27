@@ -14,17 +14,23 @@ typedef struct
     bool eliminated;
 }
 candidate;
-int voters
+
+int voters_count;
+int candidates_count;
 
 
 int main(int argc, string argv[])
 {
-    int voters = get_int("number of voters: ");
-    int candidate_count = argc-1;
-    for(int i = 0; i < candidate_count; i++)
+    if (argc < 2)
     {
-
-
+        printf("Usage: runoff [candidate ...]\n");
+        return  1;
+    }
+    candidates_count = argc - 1;
+    if (candidates_count > MAX_CANDIDATES)
+    {
+        printf("Maximum number of candidates is %i\n", MAX_CANDIDATES);
+        return 2;
     }
 
 
