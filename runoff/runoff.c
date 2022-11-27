@@ -151,7 +151,7 @@ void tabulate(void)
                 candidates[preferences[i][j]].votes++;
             }
         }
-        printf("%d",candidates[preferences[i][j]].votes);
+        
 
     }
 
