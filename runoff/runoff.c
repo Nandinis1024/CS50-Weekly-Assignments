@@ -148,10 +148,10 @@ void tabulate(void)
         {
             if(candidates[i].eliminated==false)
             {
-                candidates[i].votes++;
+                candidates[preferences[i][j]].votes++;
             }
         }
-        printf("%d",candidates[i].votes);
+        printf("%d",candidates[preferences[i][j]].votes);
 
     }
 
