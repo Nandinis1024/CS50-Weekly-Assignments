@@ -21,7 +21,7 @@ int voters_count;
 int candidates_count;
 
 
-
+bool vote(int voter, int rank, string name);
 int main(int argc, string argv[])
 {
     if (argc < 2)
@@ -64,4 +64,16 @@ int main(int argc, string argv[])
 
 
 
+}
+bool vote(int voter, int rank, string name)
+{
+    for( int i = 0; i < candidates_count; i++)
+    {
+        if(strcmp(candidates[i].name, name)==0)
+        {
+            preferences[i][j]=i;
+            return true;
+
+        }
+    }
 }
