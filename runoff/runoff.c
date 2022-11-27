@@ -77,7 +77,12 @@ int main(int argc, string argv[])
                 printf("Invalid vote.\n");
                 return 4;
             }
-            printf()
+             else
+             {
+                printf("%d ", preferences[i][j])
+
+             }
+             
         }
 
         printf("\n");
