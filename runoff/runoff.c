@@ -146,12 +146,12 @@ void tabulate(void)
     {
         for(int j=0;j<candidate_count;j++)
         {
-            if(candidate[i].eliminted==false)
+            if(candidates[i].eliminated==false)
             {
-                candidate[i].votes++;
+                candidates[i].votes++;
             }
         }
-        print("%d",candidate[i].votes);
+        printf("%d",candidates[i].votes);
 
     }
 
