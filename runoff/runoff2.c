@@ -32,6 +32,10 @@ int main(int argc, string argv[])
         printf("Maximum number of candidates is %i\n", MAX_CANDIDATES);
         return 2;
     }
+    for (int i = 0; i < candidates_count; i++)
+    {
+        candidates[i].
+    }
 
 
 
