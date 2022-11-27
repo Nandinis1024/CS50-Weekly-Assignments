@@ -151,7 +151,7 @@ void tabulate(void)
                 candidates[preferences[i][j]].votes++;
             }
         }
-        
+
 
     }
 
@@ -161,7 +161,15 @@ void tabulate(void)
 // Print the winner of the election, if there is one
 bool print_winner(void)
 {
-    // TODO
+    for(int i=0;i<candidate_count;i++)
+    {
+        string most_votes = candidates[i].name;
+        if(candidates[i].votes>=(voter_count/2))
+        {
+            printf("winner is: %s\n",most_votes);
+
+        }
+    }
     return false;
 }
 
