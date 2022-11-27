@@ -133,11 +133,19 @@ void add_pairs(void)
         {
             if (preferences[i][j] > preferences[j][i])
             {
-                
+                pairs[pair_count].winner = i;
+                pairs[pair_count].looser = j;
+                pair_count++;
+            }
+            else if (preferences[i][j] > preferences[j][i])
+            {
+                pairs[pair_count].winner = j;
+                pairs[pair_count].looser = i;
+                pair_count++;
+
             }
         }
     }
-    return;
 }
 
 // Sort pairs in decreasing order by strength of victory
