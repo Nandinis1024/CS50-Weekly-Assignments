@@ -151,6 +151,8 @@ void tabulate(void)
                 candidate[i].votes++;
             }
         }
+        print("%d",candidate[i].votes);
+
     }
 
     return;
