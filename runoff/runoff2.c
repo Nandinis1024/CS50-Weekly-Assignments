@@ -52,7 +52,14 @@ int main(int argc, string argv[])
         for (int j = 0; j < candidates_count; j++)
         {
             string name = get_string("rank %i is: ", j + 1);
+            if(!vote(i, j, name))
+            {
+                printf("Invalid vote.\n");
+                return 4;
+            }
         }
+        printf("\n");
+
     }
 
 
