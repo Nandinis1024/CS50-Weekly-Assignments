@@ -79,10 +79,10 @@ int main(int argc, string argv[])
             }
              else
              {
-                printf("%d ", preferences[i][j])
+                printf("%d ", preferences[i][j]);
 
              }
-             
+
         }
 
         printf("\n");
