@@ -8,7 +8,11 @@ int main(int argc, string argv[])
 {
     int voters = get_int("number of voters: ");
     int candidate_count = argc-1;
-    for(int i = 0; i < )
+    for(int i = 0; i < candidate_count; i++)
+    {
+        
+
+    }
 
 
 
