@@ -82,6 +82,7 @@ int main(int argc, string argv[])
                 printf("Invalid vote.\n");
                 return 3;
             }
+            
         }
 
         record_preferences(ranks);
