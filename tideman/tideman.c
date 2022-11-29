@@ -154,13 +154,14 @@ void add_pairs(void)
             }
         }
     }
+    return;
 
 }
 
 // Sort pairs in decreasing order by strength of victory
 void sort_pairs(void)
 {
-    // TODO
+    for (int i = pair_count - 1; j >= )
     return;
 }
 
