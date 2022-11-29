@@ -88,7 +88,11 @@ int main(int argc, string argv[])
 
 
         record_preferences(ranks);
-        for (int i = 0; i < MAX; i++)
+
+
+        printf("\n");
+    }
+    for (int i = 0; i < MAX; i++)
         {
             for (int j = 0; j < MAX; j++)
             {
@@ -96,9 +100,6 @@ int main(int argc, string argv[])
             }
             printf("\n");
         }
-
-        printf("\n");
-    }
 
 
     add_pairs();
