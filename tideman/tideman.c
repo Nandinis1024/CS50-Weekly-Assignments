@@ -84,7 +84,7 @@ int main(int argc, string argv[])
             }
         }
 
-        record_preferences(ranks);  
+        record_preferences(ranks);
 
         printf("\n");
     }
@@ -99,7 +99,11 @@ int main(int argc, string argv[])
 // Update ranks given a new vote
 bool vote(int rank, string name, int ranks[])
 {
+  for ( int i = 0; i < count_candidates; i++)
+  {
+    
 
+  }
 
 }
 
