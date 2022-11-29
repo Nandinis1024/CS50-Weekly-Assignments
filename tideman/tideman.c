@@ -92,14 +92,6 @@ int main(int argc, string argv[])
 
         printf("\n");
     }
-    for (int i = 0; i < MAX; i++)
-        {
-            for (int j = 0; j < MAX; j++)
-            {
-                printf("%d\n",preferences[i][j]);
-            }
-            printf("\n");
-        }
 
 
     add_pairs();
