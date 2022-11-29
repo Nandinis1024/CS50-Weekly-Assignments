@@ -111,10 +111,7 @@ bool vote(int rank, string name, int ranks[])
         return true;
     }
  }
- for (int i = 0; i < candidate_count; i++)
- {
-    printf("%d\n",ranks[i]);
- }
+ 
 return false;
 
 }
