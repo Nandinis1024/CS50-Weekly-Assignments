@@ -39,7 +39,7 @@ void blur(int height, int width, RGBTRIPLE image[height][width])
     {
         for (int j = 0; j < width; j++)
         {
-            RGBTRIPLE temp = image[i][j];
+
             for (x = i-1; x <= i+1; x++)
             {
                 int redsum = 0, bluesum = 0, greensum = 0;
@@ -56,7 +56,14 @@ void blur(int height, int width, RGBTRIPLE image[height][width])
 
                 }
             }
-            int redavg = (redsum)/
+            int redavg = (redsum)/((i*j)-1);
+            int blueavg = (bluesum)/((i*j)-1);
+            int greenavg = (greensum)/((i*j)-1);
+            image[i][j].rgbtRed = redavg;
+            image[i][j].rgbtBlue = blueavg;
+            image[i][j].rgbtGreen = greenavg;
+
+
         }
     }
     return;
