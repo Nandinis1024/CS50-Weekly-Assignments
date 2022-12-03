@@ -88,8 +88,13 @@ void edges(int height, int width, RGBTRIPLE image[height][width])
                 {
                     if (x >=0 && y >= 0 && x < height && y < width)
                     {
-                        for (int i = 0; i < 3; i++)
-                        
+                        for (int m = 0; m < 3; m++)
+                        {
+                            for (int n = 0; n < 3; n++)
+                            {
+                                
+                            }
+                        }
                     }
                 }
             }
