@@ -90,16 +90,16 @@ void edges(int height, int width, RGBTRIPLE image[height][width])
             double sum_green_y = 0;
             double sum_red_y = 0;
 
+            int row = 0;
+
             for (int x = i-1; x <= i+1; x++)
             {
+                int col = 0;
                 for (int y = j-1; y <= j+1; y++)
                 {
                     if (x >=0 && y >= 0 && x < height && y < width)
                     {
-                        for (int m = 0; m < 3; m++)
-                        {
-                            for (int n = 0; n < 3; n++)
-                            {
+
                                 sum_blue_x += image[x][y].rgbtBlue * gx[m][n];
                                 sum_green_x += image[x][y].rgbtGreen * gx[m][n];
                                 sum_red_x += image[x][y].rgbtRed * gx[m][n];
@@ -110,10 +110,13 @@ void edges(int height, int width, RGBTRIPLE image[height][width])
 
 
 
-                            }
-                        }
+
+
                     }
+                    col++;
+
                 }
+                row++;
             }
 
 
