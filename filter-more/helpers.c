@@ -49,7 +49,7 @@ void blur(int height, int width, RGBTRIPLE image[height][width])
 
                 for (int y = j-1; y <= j+1; y++)
                 {
-                    if (x!=i && y!=j)
+                    if (x>0 && y>0 && x!=i && y!=j)
                     {
                          redsum = redsum + image[x][y].rgbtRed;
                          bluesum = bluesum + image[x][y].rgbtBlue;
