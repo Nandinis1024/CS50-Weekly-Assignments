@@ -41,7 +41,7 @@ void blur(int height, int width, RGBTRIPLE image[height][width])
         for (int j = 0; j < width; j++)
         {
             // Variable that counts how many numbers added to arrive at the sum
-            int count = 0;
+
 
             // Sum variables for each colour
             double sum_blue = 0;
@@ -59,14 +59,14 @@ void blur(int height, int width, RGBTRIPLE image[height][width])
                         sum_blue += image[k][l].rgbtBlue;
                         sum_green += image[k][l].rgbtGreen;
                         sum_red += image[k][l].rgbtRed;
-                        count++;
+
                     }
                 }
             }
             // Use the averages from the surrounding pixels and set the new colour values for the iterated pixel
-            image[i][j].rgbtBlue = round(sum_blue / count);
-            image[i][j].rgbtGreen = round(sum_green / count);
-            image[i][j].rgbtRed = round(sum_red / count);
+            image[i][j].rgbtBlue = round(sum_blue / (i*j));
+            image[i][j].rgbtGreen = round(sum_green / (i*j));
+            image[i][j].rgbtRed = round(sum_red / (i*j));
         }
     }
     return;
