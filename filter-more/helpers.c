@@ -100,13 +100,13 @@ void edges(int height, int width, RGBTRIPLE image[height][width])
                     if (x >=0 && y >= 0 && x < height && y < width)
                     {
 
-                                sum_blue_x += image[x][y].rgbtBlue * gx[m][n];
-                                sum_green_x += image[x][y].rgbtGreen * gx[m][n];
-                                sum_red_x += image[x][y].rgbtRed * gx[m][n];
+                                sum_blue_x += image[x][y].rgbtBlue * gx[row][col];
+                                sum_green_x += image[x][y].rgbtGreen * gx[row][col];
+                                sum_red_x += image[x][y].rgbtRed * gx[row][col];
 
-                                sum_blue_y += image[x][y].rgbtBlue * gy[m][n];
-                                sum_green_y += image[x][y].rgbtGreen * gy[m][n];
-                                sum_red_y += image[x][y].rgbtRed * gy[m][n];
+                                sum_blue_y += image[x][y].rgbtBlue * gy[row][col];
+                                sum_green_y += image[x][y].rgbtGreen * gy[row][col];
+                                sum_red_y += image[x][y].rgbtRed * gy[row][col];
 
 
 
