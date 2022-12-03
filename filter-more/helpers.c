@@ -36,11 +36,8 @@ void reflect(int height, int width, RGBTRIPLE image[height][width])
 // Blur image
 void blur(int height, int width, RGBTRIPLE image[height][width])
 {
-
-    // Iterate through the height or also known as each row
     for (int i = 0; i < height; i++)
     {
-        // Iterate through the width or also known as each pixel/column
         for (int j = 0; j < width; j++)
         {
             // Variable that counts how many numbers added to arrive at the sum
