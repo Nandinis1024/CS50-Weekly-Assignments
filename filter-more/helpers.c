@@ -76,74 +76,71 @@ void blur(int height, int width, RGBTRIPLE image[height][width])
 // Detect edges
 void edges(int height, int width, RGBTRIPLE image[height][width])
 {
-    int gx[3][3] = {{-1,0,1},{-2,0,2},{-1,0,1}};
-    int gy[3][3] = {{-1,-2,-2},{0,0,0},{1,2,1}};
+     RGBTRIPLE temp[height][width];
+
+    // Make copy of image
     for (int i = 0; i < height; i++)
     {
         for (int j = 0; j < width; j++)
         {
-            double sum_blue_x = 0;
-            double sum_green_x = 0;
-            double sum_red_x = 0;
+            temp[i][j] = image[i][j];
+        }
+    }
 
-            double sum_blue_y = 0;
-            double sum_green_y = 0;
-            double sum_red_y = 0;
+    // Sobel Operator matrices for Gx and Gy
+    int kernel_Gx[3][3] = {{-1, 0, 1}, {-2, 0, 2}, {-1, 0, 1}};
+    int kernel_Gy[3][3] = {{-1, -2, -1}, {0, 0, 0}, {1, 2, 1}};
 
+    // Iterate through the height or also known as each row
+    for (int i = 0; i < height; i++)
+    {
+        // Iterate through the width or also known as each pixel/column
+        for (int j = 0; j < width; j++)
+        {
+            // Initialize values for weighted sums in the x direction
+            double gx_blue = 0;
+            double gx_green = 0;
+            double gx_red = 0;
+            // Initialize values for weighted sums in the y direction
+            double gy_blue = 0;
+            double gy_green = 0;
+            double gy_red = 0;
+            // Counter to detect what row of the 3x3 the loop is iterating
             int row = 0;
 
-            for (int x = i-1; x <= i+1; x++)
+            // Loop to check the surrounding pixels within 1 row
+            for (int k = i - 1; k <= i + 1; k++)
             {
-                int col = 0;
-                for (int y = j-1; y <= j+1; y++)
+                // Counter to detect what column of the 3x3 grid the loop is iterating
+                int column = 0;
+                // Loop to check the surrounding pixels within 1 column
+                for (int l = j - 1; l <= j + 1; l++)
                 {
-                    if (x >=0 && y >= 0 && x < height && y < width)
+                    // Only adds pixels that are within the image boundaries
+                    if (k >= 0 && l >= 0 && k < height && l < width)
                     {
-
-                                sum_blue_x += image[x][y].rgbtBlue * gx[row][col];
-                                sum_green_x += image[x][y].rgbtGreen * gx[row][col];
-                                sum_red_x += image[x][y].rgbtRed * gx[row][col];
-
-                                sum_blue_y += image[x][y].rgbtBlue * gy[row][col];
-                                sum_green_y += image[x][y].rgbtGreen * gy[row][col];
-                                sum_red_y += image[x][y].rgbtRed * gy[row][col];
-
-
-
-
-
+                        // Calculate Gx
+                        gx_blue += (kernel_Gx[row][column] * temp[k][l].rgbtBlue);
+                        gx_green += (kernel_Gx[row][column] * temp[k][l].rgbtGreen);
+                        gx_red += (kernel_Gx[row][column] * temp[k][l].rgbtRed);
+                        // Calculate Gy
+                        gy_blue += (kernel_Gy[row][column] * temp[k][l].rgbtBlue);
+                        gy_green += (kernel_Gy[row][column] * temp[k][l].rgbtGreen);
+                        gy_red += (kernel_Gy[row][column] * temp[k][l].rgbtRed);
                     }
-                    col++;
-
+                    column++;
                 }
                 row++;
             }
+            // Combine Gx and Gy
+            int sobel_blue = round(sqrt(pow(gx_blue, 2) + pow(gy_blue, 2)));
+            int sobel_green = round(sqrt(pow(gx_green, 2) + pow(gy_green, 2)));
+            int sobel_red = round(sqrt(pow(gx_red, 2) + pow(gy_red, 2)));
 
-
-
-            int blue = round(sqrt(pow(sum_blue_x, 2)+pow(sum_blue_y, 2)));
-            int green = round(sqrt(pow(sum_green_x, 2)+pow(sum_green_y, 2))) ;
-        int red = round(sqrt(pow(sum_red_x, 2)+pow(sum_red_y, 2)));
-
-            if( blue > 255)
-            {
-                blue = 255;
-            }
-            if( green > 255)
-            {
-                green = 255;
-            }
-            if( red > 255)
-            {
-                red = 255;
-            }
-            image[i][j].rgbtRed = red;
-            image[i][j].rgbtGreen = green;
-            image[i][j].rgbtBlue = blue;
-
-
-
-
+            // Set the new colour values for the iterated pixel and cap at 255 if necessary
+            image[i][j].rgbtBlue = (sobel_blue > 255) ? 255 : sobel_blue;
+            image[i][j].rgbtGreen = (sobel_green > 255) ? 255 : sobel_green;
+            image[i][j].rgbtRed = (sobel_red > 255) ? 255 : sobel_red;
         }
     }
 
