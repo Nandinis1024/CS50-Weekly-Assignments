@@ -44,17 +44,17 @@ void blur(int height, int width, RGBTRIPLE image[height][width])
             // Variable that counts how many numbers added to arrive at the sum
             int count = 0;
 
-            // Sum variables for each colour
+
             double sum_blue = 0;
             double sum_green = 0;
             double sum_red = 0;
 
-            // Loop to check the surrounding pixels within 1 column and 1 row
+
             for (int k = i - 1; k <= i + 1; k++)
             {
                 for (int l = j - 1; l <= j + 1; l++)
                 {
-                    // Only adds pixels that are within the image boundaries
+
                     if (k >= 0 && l >= 0 && k < height && l < width && k!=i && l!=j)
                     {
                         sum_blue += image[k][l].rgbtBlue;
@@ -64,7 +64,7 @@ void blur(int height, int width, RGBTRIPLE image[height][width])
                     }
                 }
             }
-            // Use the averages from the surrounding pixels and set the new colour values for the iterated pixel
+            
             image[i][j].rgbtBlue = round(sum_blue / count);
             image[i][j].rgbtGreen = round(sum_green / count);
             image[i][j].rgbtRed = round(sum_red / count);
@@ -73,7 +73,7 @@ void blur(int height, int width, RGBTRIPLE image[height][width])
     return;
 }
 
-// Detect edges
+
 void edges(int height, int width, RGBTRIPLE image[height][width])
 {
      RGBTRIPLE temp[height][width];
@@ -150,7 +150,7 @@ void edges(int height, int width, RGBTRIPLE image[height][width])
             {
                 blue = 255;
             }
-            
+
             image[i][j].rgbtRed = red;
             image[i][j].rgbtGreen = green;
             image[i][j].rgbtBlue = blue;
