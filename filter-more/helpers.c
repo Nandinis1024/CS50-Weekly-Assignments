@@ -45,11 +45,11 @@ void blur(int height, int width, RGBTRIPLE image[height][width])
             redsum = 0, bluesum = 0, greensum = 0;
             for (int x = i-1; x <= i+1; x++)
             {
-
-
-                for (int y = j-1; y <= j+1; y++)
+                if(x>0 && x!=i)
                 {
-                    if (x>0 && y>0 && x!=i && y!=j)
+                    for (int y = j-1; y <= j+1; y++)
+                {
+                    if (y>0 && y!=j)
                     {
                          redsum = redsum + image[x][y].rgbtRed;
                          bluesum = bluesum + image[x][y].rgbtBlue;
@@ -59,6 +59,11 @@ void blur(int height, int width, RGBTRIPLE image[height][width])
 
 
                 }
+
+                }
+
+
+
             }
             int redavg = (redsum)/((i*j)-1);
             int blueavg = (bluesum)/((i*j)-1);
