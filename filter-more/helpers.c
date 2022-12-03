@@ -36,43 +36,50 @@ void reflect(int height, int width, RGBTRIPLE image[height][width])
 // Blur image
 void blur(int height, int width, RGBTRIPLE image[height][width])
 {
-    float redsum, bluesum, greensum;
+    RGBTRIPLE temp[height][width];
+
+    // Make a copy of image to preserve original values
     for (int i = 0; i < height; i++)
     {
         for (int j = 0; j < width; j++)
         {
+            temp[i][j] = image[i][j];
+        }
+    }
 
-            redsum = 0, bluesum = 0, greensum = 0;
-            for (int x = i-1; x <= i+1; x++)
+    // Iterate through the height or also known as each row
+    for (int i = 0; i < height; i++)
+    {
+        // Iterate through the width or also known as each pixel/column
+        for (int j = 0; j < width; j++)
+        {
+            // Variable that counts how many numbers added to arrive at the sum
+            int count = 0;
+
+            // Sum variables for each colour
+            double sum_blue = 0;
+            double sum_green = 0;
+            double sum_red = 0;
+
+            // Loop to check the surrounding pixels within 1 column and 1 row
+            for (int k = i - 1; k <= i + 1; k++)
             {
-                if(x>0 && x!=i)
+                for (int l = j - 1; l <= j + 1; l++)
                 {
-                    for (int y = j-1; y <= j+1; y++)
-                {
-                    if (y>0 && y!=j)
+                    // Only adds pixels that are within the image boundaries
+                    if (k >= 0 && l >= 0 && k < height && l < width)
                     {
-                         redsum = redsum + image[x][y].rgbtRed;
-                         bluesum = bluesum + image[x][y].rgbtBlue;
-                         greensum = greensum + image[x][y].rgbtGreen;
-
+                        sum_blue += temp[k][l].rgbtBlue;
+                        sum_green += temp[k][l].rgbtGreen;
+                        sum_red += temp[k][l].rgbtRed;
+                        count++;
                     }
-
-
                 }
-
-                }
-
-
-
             }
-            int redavg = (redsum)/((i*j)-1);
-            int blueavg = (bluesum)/((i*j)-1);
-            int greenavg = (greensum)/((i*j)-1);
-            image[i][j].rgbtRed = round(redavg);
-            image[i][j].rgbtBlue = round(blueavg);
-            image[i][j].rgbtGreen = round(greenavg);
-
-
+            // Use the averages from the surrounding pixels and set the new colour values for the iterated pixel
+            image[i][j].rgbtBlue = round(sum_blue / count);
+            image[i][j].rgbtGreen = round(sum_green / count);
+            image[i][j].rgbtRed = round(sum_red / count);
         }
     }
     return;
