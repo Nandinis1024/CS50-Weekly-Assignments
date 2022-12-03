@@ -59,9 +59,9 @@ void blur(int height, int width, RGBTRIPLE image[height][width])
                     // Only adds pixels that are within the image boundaries
                     if (k >= 0 && l >= 0 && k < height && l < width)
                     {
-                        sum_blue += temp[k][l].rgbtBlue;
-                        sum_green += temp[k][l].rgbtGreen;
-                        sum_red += temp[k][l].rgbtRed;
+                        sum_blue += image[k][l].rgbtBlue;
+                        sum_green += image[k][l].rgbtGreen;
+                        sum_red += image[k][l].rgbtRed;
                         count++;
                     }
                 }
