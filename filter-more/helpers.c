@@ -36,52 +36,7 @@ void reflect(int height, int width, RGBTRIPLE image[height][width])
 // Blur image
 void blur(int height, int width, RGBTRIPLE image[height][width])
 {
-    RGBTRIPLE temp[height][width];
-
-    // Make a copy of image to preserve original values
-    for (int i = 0; i < height; i++)
-    {
-        for (int j = 0; j < width; j++)
-        {
-            temp[i][j] = image[i][j];
-        }
-    }
-
-    // Iterate through the height or also known as each row
-    for (int i = 0; i < height; i++)
-    {
-        // Iterate through the width or also known as each pixel/column
-        for (int j = 0; j < width; j++)
-        {
-            // Variable that counts how many numbers added to arrive at the sum
-            int count = 0;
-
-            // Sum variables for each colour
-            double sum_blue = 0;
-            double sum_green = 0;
-            double sum_red = 0;
-
-            // Loop to check the surrounding pixels within 1 column and 1 row
-            for (int k = i - 1; k <= i + 1; k++)
-            {
-                for (int l = j - 1; l <= j + 1; l++)
-                {
-                    // Only adds pixels that are within the image boundaries
-                    if (k >= 0 && l >= 0 && k < height && l < width)
-                    {
-                        sum_blue += temp[k][l].rgbtBlue;
-                        sum_green += temp[k][l].rgbtGreen;
-                        sum_red += temp[k][l].rgbtRed;
-                        count++;
-                    }
-                }
-            }
-            // Use the averages from the surrounding pixels and set the new colour values for the iterated pixel
-            image[i][j].rgbtBlue = round(sum_blue / count);
-            image[i][j].rgbtGreen = round(sum_green / count);
-            image[i][j].rgbtRed = round(sum_red / count);
-        }
-    }
+    
     return;
 }
 
