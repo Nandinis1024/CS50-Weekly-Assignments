@@ -51,7 +51,7 @@ void blur(int height, int width, RGBTRIPLE image[height][width])
             float sum_blue = 0;
             float sum_green = 0;
             float sum_red = 0;
-            int counter = 0;
+            int count = 0;
 
 
             for (int k = i - 1; k <= i + 1; k++)
