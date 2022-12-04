@@ -39,6 +39,7 @@ void reflect(int height, int width, RGBTRIPLE image[height][width])
 // Blur image
 void blur(int height, int width, RGBTRIPLE image[height][width])
 {
+    //The first step with the code for this one is to duplicate the image into a separate array of RGBTRIPLEs. This is required as we require the original surrounding pixels at all times to calculate the averages, which will be removed from the original image once we start blurring.
     RGBTRIPLE temp[height][width];
     for (int i = 0; i < height; i++)
     {
