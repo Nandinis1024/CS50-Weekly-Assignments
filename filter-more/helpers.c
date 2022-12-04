@@ -44,13 +44,14 @@ void blur(int height, int width, RGBTRIPLE image[height][width])
 
         for (int j = 0; j < width; j++)
         {
-            // Variable that counts how many numbers added to arrive at the sum
-            int count = 0;
 
 
-            double sum_blue = 0;
-            double sum_green = 0;
-            double sum_red = 0;
+
+
+            float sum_blue = 0;
+            float sum_green = 0;
+            float sum_red = 0;
+            int counter = 0;
 
 
             for (int k = i - 1; k <= i + 1; k++)
@@ -58,7 +59,7 @@ void blur(int height, int width, RGBTRIPLE image[height][width])
                 for (int l = j - 1; l <= j + 1; l++)
                 {
 
-                    if (k >= 0 && l >= 0 && k < height && l < width && k!=i && l!=j)
+                    if (k >= 0 && l >= 0 && k < height && l < width)
                     {
                         sum_blue += image[k][l].rgbtBlue;
                         sum_green += image[k][l].rgbtGreen;
