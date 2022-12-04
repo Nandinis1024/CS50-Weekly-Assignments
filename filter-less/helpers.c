@@ -35,7 +35,9 @@ void sepia(int height, int width, RGBTRIPLE image[height][width])
     {
         for (int j = 0; j < width; j++)
         {
-            
+            int sepia_red = round()
+            int sepia_green
+            int sepia_blue
         }
     }
     return;
