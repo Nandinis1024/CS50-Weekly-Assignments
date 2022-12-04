@@ -77,6 +77,7 @@ void blur(int height, int width, RGBTRIPLE image[height][width])
                         count++;
                     }
                 }
+                
             }
 
             image[i][j].rgbtBlue = round(sum_blue / count);
