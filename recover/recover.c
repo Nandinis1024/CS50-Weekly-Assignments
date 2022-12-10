@@ -55,5 +55,9 @@ while (fread(buffer, 1, BLOCK_SIZE, file) == BLOCK_SIZE)
 
 
 }
+    fclose(input);
+    fclose(picture);
+
+    return 0;
 }
 
