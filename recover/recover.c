@@ -12,3 +12,4 @@ int main(int argc, char *argv[])
 
 }
 //opening the memory card
+FILE*file = fopen(argv[1], "r");
