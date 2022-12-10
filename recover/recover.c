@@ -46,6 +46,11 @@ while (fread(buffer, 1, BLOCK_SIZE, file) == BLOCK_SIZE)
 
 
     }
+    if (img != 1)
+        {
+
+            fwrite(&buffer, BLOCK_SIZE, 1, picture);
+        }
 
 
 
