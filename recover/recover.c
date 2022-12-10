@@ -1,3 +1,4 @@
+#include <cs50>
 #include <stdio.h>
 #include <stdlib.h>
 #include <stdint.h>
