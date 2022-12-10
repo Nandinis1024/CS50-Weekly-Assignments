@@ -1,8 +1,10 @@
 #include <stdio.h>
 #include <stdlib.h>
+#include <stdint.h>
 
 // Number of bytes in .wav header
 const int BLOCK_SIZE = 512;
+
 
 int main(int argc, char *argv[])
 {
@@ -16,3 +18,6 @@ int main(int argc, char *argv[])
 }
 //opening the memory card
 FILE*file = fopen(argv[1], "r");
+typedef uint8_t BYTE;
+BYTE buffer[BLOCK_SIZE];
+
