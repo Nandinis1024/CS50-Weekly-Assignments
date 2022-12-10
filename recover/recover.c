@@ -16,7 +16,7 @@ int main(int argc, char *argv[])
        return 1;
     }
 
-}
+
 //opening the memory card
 FILE*file = fopen(argv[1], "r");
 if(file == NULL)
@@ -32,9 +32,9 @@ typedef uint8_t BYTE;
 BYTE buffer[BLOCK_SIZE];
 while (fread(buffer, 1, BLOCK_SIZE, file) == BLOCK_SIZE)
 {                                                                                                                       + +
-    if (buffer[0]==0xff && buffer[1] == 0xd8 && buffer[2] == 0Xff && (buffer[3] & 0Xf0) == 0Xe0 )
+    if(buffer[0]==0xff && buffer[1] == 0xd8 && buffer[2] == 0Xff && (buffer[3] & 0Xf0) == 0Xe0 )
     {
-        if (img != NULL)
+        if(img != NULL)
         {
             fclose(img);
         }
