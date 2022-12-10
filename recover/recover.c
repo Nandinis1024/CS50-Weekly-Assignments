@@ -3,7 +3,7 @@
 #include <stdlib.h>
 #include <stdint.h>
 
-// Number of bytes in .wav header
+// Number of bytes in header
 const int BLOCK_SIZE = 512;
 
 
