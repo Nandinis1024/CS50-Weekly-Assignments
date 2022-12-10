@@ -39,24 +39,24 @@ int main(int argc, char *argv[])
                 fclose(img);
             }
 
-                sprintf(filename, "%03d.jpg", file_count++);
-                img = fopen(filename, "w");
+            sprintf(filename, "%03d.jpg", file_count++);
+            img = fopen(filename, "w");
 
 
 
         }
         if (img != NULL)
-            {
+        {
 
             fwrite(&buffer, BLOCK_SIZE, 1, img);
-            }
+        }
 
 
 
     }
-        fclose(file);
-        fclose(img);
+    fclose(file);
+    fclose(img);
 
-        return 0;
-    }
+    return 0;
+}
 
