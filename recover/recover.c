@@ -3,8 +3,11 @@
 
 int main(int argc, char *argv[])
 {
+    //checking the command-line arguments
  if (argc != 2)
  {
-    printf("Usage: ./recover input.wav output.wav factor\n")
+    printf("Usage: ./recover IMAGE\n");
+    return 1;
  }
+
 }
