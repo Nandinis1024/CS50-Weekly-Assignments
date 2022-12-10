@@ -20,7 +20,7 @@ int main(int argc, char *argv[])
 FILE*file = fopen(argv[1], "r");
 typedef uint8_t BYTE;
 BYTE buffer[BLOCK_SIZE];
-while (fread(buffer, 1, BLOCK_SIZE, raw_file) == BLOCK_SIZE)
+while (fread(buffer, 1, BLOCK_SIZE, file) == BLOCK_SIZE)
 {
 
 
