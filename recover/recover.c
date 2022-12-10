@@ -40,11 +40,13 @@ while (fread(buffer, 1, BLOCK_SIZE, file) == BLOCK_SIZE)
         }
         else
         {
-            
+            sprintf(filename, "%03d.jpg", file_count++);
+            img = fopen(filename, "w");
         }
 
 
     }
+
 
 
 }
