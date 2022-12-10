@@ -33,30 +33,30 @@ int main(int argc, char *argv[])
     while (fread(buffer, 1, BLOCK_SIZE, file) == BLOCK_SIZE)
     {
         if (buffer[0] == 0xff && buffer[1] == 0xd8 && buffer[2] == 0Xff && (buffer[3] & 0Xf0) == 0Xe0)
-    {
-        if (img != NULL)
         {
-            fclose(img);
-        }
+            if (img != NULL)
+            {
+                fclose(img);
+            }
 
-            sprintf(filename, "%03d.jpg", file_count++);
-            img = fopen(filename, "w");
+                sprintf(filename, "%03d.jpg", file_count++);
+                img = fopen(filename, "w");
+
+
+
+        }
+        if (img != NULL)
+            {
+
+            fwrite(&buffer, BLOCK_SIZE, 1, img);
+            }
 
 
 
     }
-    if (img != NULL)
-        {
+        fclose(file);
+        fclose(img);
 
-            fwrite(&buffer, BLOCK_SIZE, 1, img);
-        }
-
-
-
-}
-    fclose(file);
-    fclose(img);
-
-    return 0;
-}
+        return 0;
+    }
 
