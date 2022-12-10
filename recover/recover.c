@@ -26,7 +26,7 @@ if(file == NULL)
 }
 FILE*img = NULL;
 int file_count = 0;
-char filename[8];
+char filename[8] = {0};
 
 typedef uint8_t BYTE;
 BYTE buffer[BLOCK_SIZE];
@@ -38,11 +38,10 @@ while (fread(buffer, 1, BLOCK_SIZE, file) == BLOCK_SIZE)
         {
             fclose(img);
         }
-        else
-        {
+        
             sprintf(filename, "%03d.jpg", file_count++);
             img = fopen(filename, "w");
-        }
+
 
 
     }
