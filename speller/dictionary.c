@@ -38,20 +38,22 @@ bool load(const char *dictionary)
 {
     // TODO
     //open dictionary file
-    char word[LENGTH + 1];
+    char buffer[LENGTH + 1];
     FILE *input = fopen(DICTIONARY, "r");
     if (input == NULL)
     {
         return 1;
     }
-    while (fcanf(input, %s,  word) != EOF)
+    while (fcanf(input, %s, buffer) != EOF)
     {
         node *newnode = malloc(sizeof(node));
         if (newnode == NULL)
         {
             return 1;
         }
-        
+        strcpy(newnode->word, buffer);
+        newnode->next = NULL;
+
 
     }
     return false;
