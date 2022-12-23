@@ -4,7 +4,6 @@
 #include <stdio.h>
 #include <stdlib.h>
 
-szs
 
 int main(int argc, char *argv[])
 {
