@@ -45,6 +45,9 @@ bool load(const char *dictionary)
         return 1;
     }
     while (fcanf(input, %s,  word))
+    {
+        
+    }
     return false;
 }
 
