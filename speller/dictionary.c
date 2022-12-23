@@ -38,12 +38,13 @@ bool load(const char *dictionary)
 {
     // TODO
     //open dictionary file
+    char word[LENGTH + 1];
     FILE *input = fopen(DICTIONARY, "r");
     if (input == NULL)
     {
         return 1;
     }
-    while (fcanf(input, %s,  ))
+    while (fcanf(input, %s,  word))
     return false;
 }
 
