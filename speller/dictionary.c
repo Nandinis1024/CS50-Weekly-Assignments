@@ -44,6 +44,8 @@ bool load(const char *dictionary)
     {
         return 1;
     }
+
+    //read file till the end
     while (fcanf(input, %s, buffer) != EOF)
     {
         node *newnode = malloc(sizeof(node));
@@ -51,9 +53,17 @@ bool load(const char *dictionary)
         {
             return 1;
         }
+
+        //copy every word to a new node
         strcpy(newnode->word, buffer);
         newnode->next = NULL;
+
+        //hash the value for each node
         hash(word);
+
+        //insert node into the hashtable
+        
+
 
 
     }
