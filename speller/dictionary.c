@@ -62,7 +62,8 @@ bool load(const char *dictionary)
         hash(word);
 
         //insert node into the hashtable
-        
+    
+
 
 
 
