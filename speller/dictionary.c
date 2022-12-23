@@ -46,6 +46,12 @@ bool load(const char *dictionary)
     }
     while (fcanf(input, %s,  word) != EOF)
     {
+        node *newnode = malloc(sizeof(node));
+        if (newnode == NULL)
+        {
+            return 1;
+        }
+        
 
     }
     return false;
