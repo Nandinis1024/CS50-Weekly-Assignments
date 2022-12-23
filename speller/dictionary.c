@@ -38,31 +38,32 @@ bool load(const char *dictionary)
 {
     // TODO
     //open dictionary file
-    char buffer[LENGTH + 1];
-    FILE *input = fopen(DICTIONARY, "r");
+    char word[LENGTH + 1];
+    FILE *input = fopen(dictionary, "r");
     if (input == NULL)
     {
-        return 1;
+        return false;
     }
 
     //read file till the end
-    while (fcanf(input, %s, buffer) != EOF)
+    while (fcanf(input, %s, word) != EOF)
     {
         node *newnode = malloc(sizeof(node));
         if (newnode == NULL)
         {
-            return 1;
+            unload();
+            return false;
         }
 
         //copy every word to a new node
-        strcpy(newnode->word, buffer);
+        strcpy(newnode->word, word);
         newnode->next = NULL;
 
         //hash the value for each node
-        hash(word);
+        int h = hash(newnode->word);
 
         //insert node into the hashtable
-    
+
 
 
 
