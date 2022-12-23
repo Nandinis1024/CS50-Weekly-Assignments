@@ -43,7 +43,7 @@ bool load(const char *dictionary)
     {
         return 1;
     }
-    
+    while (fcanf(input, %s,  ))
     return false;
 }
 
