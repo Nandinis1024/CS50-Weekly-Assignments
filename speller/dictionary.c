@@ -39,6 +39,11 @@ bool load(const char *dictionary)
     // TODO
     //open dictionary file
     FILE *input = fopen(DICTIONARY, "r");
+    if (input == NULL)
+    {
+        return 1;
+    }
+    
     return false;
 }
 
