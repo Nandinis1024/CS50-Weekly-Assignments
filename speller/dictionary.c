@@ -15,6 +15,7 @@ node;
 
 // TODO: Choose number of buckets in hash table
 const unsigned int N = 26;
+unsigned int word_count = 0;
 
 // Hash table
 node *table[N];
@@ -56,7 +57,7 @@ bool load(const char *dictionary)
     }
 
     //read file till the end
-    int word_count = 0;
+
     while (fcanf(input, %s, word) != EOF)
     {
         node *newnode = malloc(sizeof(node));
@@ -95,7 +96,7 @@ bool load(const char *dictionary)
 unsigned int size(void)
 {
     // TODO
-    return 0;
+    return word_count;
 }
 
 // Unloads dictionary from memory, returning true if successful, else false
