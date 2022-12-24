@@ -64,7 +64,8 @@ bool load(const char *dictionary)
 
         //insert node into the hashtable
         node *head = table[h];
-        
+        newnode->next = head;
+        head = newnode;
 
 
 
