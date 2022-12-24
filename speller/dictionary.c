@@ -46,6 +46,7 @@ bool load(const char *dictionary)
     }
 
     //read file till the end
+    int word_count = 0;
     while (fcanf(input, %s, word) != EOF)
     {
         node *newnode = malloc(sizeof(node));
@@ -66,11 +67,15 @@ bool load(const char *dictionary)
         node *head = table[h];
         if(head == NULL)
         {
-            
+            head = newnode;
+            word_count++;
         }
-        newnode->next = head;
-        head = newnode;
-
+        else
+        {
+            newnode->next = head;
+            head = newnode;
+            word_count++;
+        }
 
 
 
