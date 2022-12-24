@@ -32,9 +32,13 @@ unsigned int hash(const char *word)
     // TODO: Improve this hash function
     if (islower(word[0]))
     {
+        
 
     }
-    else if (isupper)
+    else if (isupper(word[0]))
+    {
+
+    }
     return toupper(word[0]) - 'A';
 }
 
