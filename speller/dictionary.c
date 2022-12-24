@@ -76,11 +76,9 @@ bool load(const char *dictionary)
             head = newnode;
             word_count++;
         }
-
-
-
     }
-    return false;
+    fclose(input);
+    return true;
 }
 
 // Returns number of words in dictionary if loaded, else 0 if not yet loaded
