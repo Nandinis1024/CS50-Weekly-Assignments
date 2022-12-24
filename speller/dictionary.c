@@ -25,7 +25,8 @@ bool check(const char *word)
 {
     // TODO
     int h = hash(word);
-    
+    node *head = table[h];
+    for (node *temp = head; )
 
     return false;
 }
