@@ -91,9 +91,9 @@ bool load(const char *dictionary)
 
         //insert node into the hashtable
 
-            newnode->next = table[h];
-            table[h] = newnode;
-            word_count++;
+        newnode->next = table[h];
+        table[h] = newnode;
+        word_count++;
 
     }
     fclose(input);
