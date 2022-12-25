@@ -51,17 +51,7 @@ bool check(const char *word)
 unsigned int hash(const char *word)
 {
     // TODO: Improve this hash function
-    if (islower(word[0]))
-    {
-        return word[0] - 'a';
-
-    }
-    else if (isupper(word[0]))
-    {
-        return word[0] - 'A';
-
-    }
-    return toupper(word[0]) - 'A';
+    
 }
 
 // Loads dictionary into memory, returning true if successful, else false
@@ -83,7 +73,7 @@ bool load(const char *dictionary)
         node *newnode = malloc(sizeof(node));
         if (newnode == NULL)
         {
-            
+
             return false;
         }
 
