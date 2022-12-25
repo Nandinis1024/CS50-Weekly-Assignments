@@ -82,7 +82,7 @@ bool load(const char *dictionary)
         node *newnode = malloc(sizeof(node));
         if (newnode == NULL)
         {
-            
+
             return false;
         }
 
@@ -94,18 +94,10 @@ bool load(const char *dictionary)
         int h = hash(newnode->word);
 
         //insert node into the hashtable
-        node *head = table[h];
-        if(head == NULL)
-        {
-            head = newnode;
-            word_count++;
-        }
-        else
-        {
-            newnode->next = head;
-            head = newnode;
-            word_count++;
-        }
+        newnode->next = table[h];
+        table[h] = newnode;
+        word_count++;
+
     }
     fclose(input);
     return true;
