@@ -89,7 +89,7 @@ bool load(const char *dictionary)
 
         //copy every word to a new node
         strcpy(newnode->word, word);
-        newnode->next = NULL;
+        
 
         //hash the value for each node
         int h = hash(newnode->word);
