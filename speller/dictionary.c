@@ -28,10 +28,10 @@ bool check(const char *word)
     node *temp = table[h];
     while (temp != NULL)
     {
-        if (temp->word == word)
+        if (strcasecmp(temp->word, word) == 0)
         {
             return true;
-            
+
         }
         else
         {
