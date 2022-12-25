@@ -51,17 +51,16 @@ bool check(const char *word)
 unsigned int hash(const char *word)
 {
     // TODO: Improve this hash function
-    if (islower(word[0]))
+    
+    // Function should take a string and return an index
+    // This hash function adds the ASCII values of all characters in     the word together
+    long sum = 0;
+    for (int i = 0; i < strlen(word); i++)
     {
-        return word[0] - 'a';
-
+        sum += tolower(word[i]);
     }
-    else if (isupper(word[0]))
-    {
-        return word[0] - 'A';
+    return sum % N;
 
-    }
-    return toupper(word[0]) - 'A';
 }
 
 // Loads dictionary into memory, returning true if successful, else false
@@ -89,7 +88,7 @@ bool load(const char *dictionary)
 
         //copy every word to a new node
         strcpy(newnode->word, word);
-        
+
 
         //hash the value for each node
         int h = hash(newnode->word);
