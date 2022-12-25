@@ -51,7 +51,7 @@ bool check(const char *word)
 unsigned int hash(const char *word)
 {
     // TODO: Improve this hash function
-    
+
     // Function should take a string and return an index
     // This hash function adds the ASCII values of all characters in     the word together
     long sum = 0;
@@ -82,7 +82,7 @@ bool load(const char *dictionary)
         node *newnode = malloc(sizeof(node));
         if (newnode == NULL)
         {
-            unload();
+            
             return false;
         }
 
