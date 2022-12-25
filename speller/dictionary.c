@@ -25,16 +25,21 @@ bool check(const char *word)
 {
     // TODO
     int h = hash(word);
-    node *head = table[h];
-    for (node *temp = head; temp != NULL; temp = temp->next)
+    node *temp = table[h];
+    while (temp != NULL)
     {
         if (temp->word == word)
         {
             return true;
-            return 1;
+            temp = temp->next;
         }
-    }
+        else
+        {
+            temp = temp->next;
+        }
 
+
+    }
     return false;
 }
 
