@@ -31,7 +31,7 @@ bool check(const char *word)
         if (temp->word == word)
         {
             return true;
-            temp = temp->next;
+            
         }
         else
         {
