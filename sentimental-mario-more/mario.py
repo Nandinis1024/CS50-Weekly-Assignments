@@ -2,7 +2,7 @@
 from  cs50 import get_int
 
 while True:
-    height = get_int(input("Height: "))
+    height = int(input("Height: "))
     width = height
     if(height > 0 and  height < 9):
         break
