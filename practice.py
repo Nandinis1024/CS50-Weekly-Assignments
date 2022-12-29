@@ -7,7 +7,11 @@ with open(filename) as file:
     reader = csv.DictReader(file)
     for row in reader:
         teams.append(row)
-        print(teams)
+    print(teams)
+
+
+
+
 
 
 
