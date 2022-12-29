@@ -8,39 +8,15 @@ while True:
 
 for row in range(1,height + 1):
     for col in range(height - row):
-        print(" ",end="")
+        print(" ", end="")
 
     for col in range(row):
-        print("#",end="")
+        print("#", end="")
 
     for col in range(2):
-        print(" ",end="")
+        print(" ", end="")
 
     for col in range(row):
-        print("#",end="")
+        print("#", end="")
 
     print()
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
