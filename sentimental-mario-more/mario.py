@@ -1,26 +1,30 @@
 # TODO
-from  cs50 import get_int
+from cs50 import get_int
 
 while True:
-    try:
-        # ask for input
-        height = int(input("Height: "))
+    height = get_int("height: ")
+    if (height > 0 and height < 9):
+        break
 
-        # make sure height is greater than 0 and less than or equal to 8
-        if height >= 1 and height <= 8:
-            break
+for row in range(1,height + 1):
+    for col in range(height - row):
+        print(" ",end="")
 
-        # iterate through height
-        for row in range(height + 1):
-            print(" " * (height - 1 - counter), end="")
-            print("#" * (counter + 1), end="")
-            print(" " * 2, end="")
-            print("#" * (counter + 1), end="")
-            print(end="\n")
+    for col in range(row):
+        print("#",end="")
 
-    # display error message is value entered is below or above 1 and 8
-    except ValueError:
-        print("Please enter a number between 1 and 8. ", end="\n")
+    for col in range(2):
+        print(" ",end="")
+
+    for col in range(row):
+        print("#",end="")
+
+    print()
+
+
+
+
+
 
 
 
