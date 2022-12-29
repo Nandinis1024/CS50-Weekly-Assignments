@@ -18,6 +18,7 @@ def main():
     # TODO: Read teams into memory from file
 
     filename = sys.argv[1]
+    #by default the value read from the csv files are all strings and we have to convert the teams' ratings to integer.
     with open(filename) as file:
         reader = csv.DictReader(file)
         for row in reader:
