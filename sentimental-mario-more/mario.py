@@ -12,7 +12,7 @@ while True:
 
 
 for rows in range(1,height + 1):
-    for col in range(height - rows):
+    for col in range(width - rows):
         print(" ",end="")
 
 
