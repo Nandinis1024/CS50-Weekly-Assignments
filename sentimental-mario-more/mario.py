@@ -1,8 +1,10 @@
 # TODO
 import sys
 while True:
-    if(height > 1 or height < 8):
-        height = int(input("Height: " ))
+    height = int(input("Height: " ))
+    if(height > 0 and height < 8):
+        break
+
     else:
         break
 
