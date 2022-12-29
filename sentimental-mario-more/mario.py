@@ -7,7 +7,7 @@ while True:
 
 
 
-for rows in range(height):
+for rows in range(height + 1):
     for col in range(rows):
         print("*",end="")
     print()
