@@ -16,7 +16,7 @@ for rows in range(height + 1):
         print("#",end="")
 
 
-    for col in range(3):
+    for col in range(2):
         print(" ",end="")
 
     for col in range(rows):
