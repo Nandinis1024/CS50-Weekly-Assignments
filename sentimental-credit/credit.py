@@ -8,7 +8,7 @@ def main():
 
 
     sum = 0
-    while(number != 0):
+    while(number > 0):
         digit = number % 10
         sum = sum + digit
         number = number / 100
