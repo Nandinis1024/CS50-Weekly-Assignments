@@ -5,7 +5,7 @@ from cs50 import get_int
 
 def main():
     number = int(input("Number: "))
-    print(sum)
+    print(checksum)
 
 
 def checksum(number):
