@@ -1,8 +1,9 @@
 # TODO
+import cs50
 
 while True:
-    height = int(input("Height: "))
-    if(height > 0 and height < 9 and height.isnumeric()):
+    height = get_int(input("Height: "))
+    if(height > 0 and height < 9):
         break
 
 
