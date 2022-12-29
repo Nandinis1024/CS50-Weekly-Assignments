@@ -17,12 +17,12 @@ def main():
     teams = []
     # TODO: Read teams into memory from file
 
-    filename = "/workspaces/114241516/world-cup/2018m.csv"
+    filename = sys.argv[1]
     with open(filename) as file:
         reader = csv.DictReader(file)
         for row in reader:
             teams.append(row)
-            
+
 
 
 
