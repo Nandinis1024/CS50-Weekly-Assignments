@@ -1,4 +1,4 @@
-import sys
+
 import csv
 filename = "/workspaces/114241516/world-cup/2018m.csv"
 with open(filename) as file:
