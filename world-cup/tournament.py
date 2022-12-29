@@ -18,15 +18,12 @@ def main():
     # TODO: Read teams into memory from file
 
     filename = sys.argv[1]
-    #by default the value read from the csv files are all strings and we have to convert the teams' ratings to integer.
+    # by default the value read from the csv files are all strings and we have to convert the teams' ratings to integer.
     with open(filename) as file:
         reader = csv.DictReader(file)
         for row in reader:
             row["rating"] = int(row["rating"])
             teams.append(row)
-
-
-
 
     counts = {}
     # TODO: Simulate N tournaments and keep track of win counts
@@ -70,8 +67,6 @@ def simulate_tournament(teams):
     while len(teams) > 1:
         teams = simulate_round(teams)
     return teams[0]["team"]
-
-
 
 
 if __name__ == "__main__":
