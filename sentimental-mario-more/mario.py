@@ -13,14 +13,14 @@ for rows in range(height + 1):
 
 
     for col in range(rows):
-        print("*",end="")
+        print("#",end="")
 
 
     for col in range(3):
         print(" ",end="")
 
     for col in range(rows):
-        print("*",end="")
+        print("#",end="")
     print()
 
 
