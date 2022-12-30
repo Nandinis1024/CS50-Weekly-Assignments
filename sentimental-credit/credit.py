@@ -4,7 +4,7 @@ from cs50 import get_int
 
 
 def main():
-    i = 1
+    i = 0
     sum1 = 0
     sum2 = 0
     number = int(input("Number: "))
@@ -27,7 +27,7 @@ def main():
 
 
 
-    
+
 
 
 
