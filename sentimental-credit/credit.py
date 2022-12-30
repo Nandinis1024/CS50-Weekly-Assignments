@@ -13,7 +13,8 @@ def main():
         sum1 = sum1 + digit
         number = int(number / 100)
     print(sum1)
-    
+    print(number)
+
 
     sum2 = 0
     number = int(number / 10)
