@@ -7,7 +7,8 @@ def main():
 def count_letters(text):
     count = 0
     for i in range(0,len(text) + 1):
-        if i.isalpha():
+        c = text[i]
+        if c.isalpha():
             count = count + 1
         else:
             continue
