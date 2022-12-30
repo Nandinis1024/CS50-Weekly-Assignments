@@ -21,8 +21,8 @@ def main():
         number = int(number /  (pow(10,i)))
         i = i + 1
 
-    print(sum1)
-    print(sum2)
+    print(sum1 + 1)
+    print(sum2 + 1)
 
 
 
