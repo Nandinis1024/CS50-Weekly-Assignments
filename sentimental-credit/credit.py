@@ -27,11 +27,7 @@ def main():
 
 
 
-    if (((sum1 + 1) + (sum2 + 2)) % 10 != 0):
-        print("INVALID")
-
-    else:
-        print("VALID")
+    
 
 
 
