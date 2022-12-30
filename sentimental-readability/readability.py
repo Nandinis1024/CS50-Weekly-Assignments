@@ -17,5 +17,5 @@ def count_letters(text):
 #def count_sentences(text):
 
 
-
+if __name__ == "__main__":
     main()
