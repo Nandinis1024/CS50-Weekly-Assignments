@@ -1,11 +1,9 @@
 # TODO
+from cs50 import get_string
 def main():
-    name = name()
-    print(name)
+    text = get_string("text: ")
 
-def name():
-    name = input("enter: ")
-    return name
 
-if __name__ == "__main__":
+
+
     main()
