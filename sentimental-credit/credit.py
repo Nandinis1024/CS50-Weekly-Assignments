@@ -7,12 +7,15 @@ def main():
     number = int(input("Number: "))
 
 
-    sum = 0
+    sum1 = 0
     while(number > 0):
         digit = number % 10
-        sum = sum + digit
+        sum1 = sum1 + digit
         number = int(number / 100)
     print(sum)
+
+
+    
 
 
 
