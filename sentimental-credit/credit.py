@@ -12,10 +12,17 @@ def main():
         digit = number % 10
         sum1 = sum1 + digit
         number = int(number / 100)
-    print(sum)
+    print(sum1)
+
+    sum2 = 0
+    number = int(number / 10)
+    while(number > 0):
+        digit = number % 10
+        sum2 = sum2 + digit
+        number = int(number / 100)
+    print(sum2)
 
 
-    
 
 
 
