@@ -22,7 +22,7 @@ def main():
 
     else:
 
-        print("Grade" + grade)
+        print("Grade" +" " + str(grade))
 
 
 def count_letters(text):
