@@ -15,7 +15,7 @@ def main():
 
         elif(i % 2 == 0):
             digit2 = number % 10
-            sum2 = sum2 + digit2
+            sum2 = sum2 + (2 * digit1)
 
 
         number = int(number /  10)
