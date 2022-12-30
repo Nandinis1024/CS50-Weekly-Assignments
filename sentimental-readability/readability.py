@@ -1,6 +1,8 @@
 # TODO
 from cs50 import get_string
+
 def main():
+    
     text = get_string("text: ")
     letters = count_letters(text)
     words = count_words(text)
@@ -12,9 +14,7 @@ def main():
     grade = round(index)
     if grade < 1:
 
-
         print("Before Grade 1")
-
 
     elif grade > 16:
 
@@ -22,7 +22,7 @@ def main():
 
     else:
 
-        print("Grade" +" " + str(grade))
+        print("Grade" + " " + str(grade))
 
 
 def count_letters(text):
@@ -33,6 +33,7 @@ def count_letters(text):
         else:
             continue
     return count
+
 
 def count_words(text):
 
@@ -54,7 +55,6 @@ def count_sentences(text):
             continue
 
     return count
-
 
 
 if __name__ == "__main__":
