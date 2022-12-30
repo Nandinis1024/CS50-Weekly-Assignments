@@ -8,7 +8,7 @@ def main():
     number = int(input("Number: "))
     while(number > 0):
         if (i % 2 != 0):
-            digit1 = number % 10
+            digit1 = number % pow(10,i)
 
 
 
