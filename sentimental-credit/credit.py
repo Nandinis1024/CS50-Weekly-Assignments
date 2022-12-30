@@ -2,13 +2,12 @@
 from cs50 import get_int
 
 
-
 def main():
 
     digit1 = 0
     i = 0
     sum_of_double_odds = 0
-    sum_of_evens  = 0
+    sum_of_evens = 0
     number = get_int("Number: ")
 
     while number > 0:
@@ -24,8 +23,6 @@ def main():
         number //= 10
         i += 1
 
-
-
     is_valid = (sum_of_evens + sum_of_double_odds) % 10 == 0
     first_two_digits = (digit1 * 10) + digit2
 
@@ -39,29 +36,5 @@ def main():
         print("INVALID\n")
 
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 if __name__ == "__main__":
     main()
-
-
-
