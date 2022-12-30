@@ -2,7 +2,7 @@
 from cs50 import get_string
 
 def main():
-    
+
     text = get_string("text: ")
     letters = count_letters(text)
     words = count_words(text)
@@ -47,6 +47,7 @@ def count_words(text):
     return count + 1
 
 def count_sentences(text):
+    
     count  = 0
     for c in text:
         if c == '.' or c == '!' or c == '?':
