@@ -9,16 +9,18 @@ def main():
     sum2 = 0
     number = int(input("Number: "))
     while(number > 0):
+        digit1 = number % 10
         if (i % 2 == 0):
-            digit1 = number % 10
+
             sum1 = sum1 + digit1
 
         elif(i % 2 == 0):
-            digit2 = number % 10
-            sum2 = sum2 + (2 * digit1)
+
+            multiple = (2 * digit1)
+            sum2 = (multiple // 10) + (multiple % 10)
 
 
-        number = int(number /  10)
+        number =(number // 10)
         i = i + 1
 
 
