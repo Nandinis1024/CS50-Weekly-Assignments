@@ -15,15 +15,15 @@ def main():
 
         elif(i % 2 == 0):
             digit2 = number % 10
-            sum2 = sum2 + (digit2 *2)
+            sum2 = sum2 + digit2
 
 
-        number = int(number /  (pow(10,i)))
+        number = int(number /  10)
         i = i + 1
 
 
-    print(sum1 + 1)
-    print(sum2 + 2)
+    print(sum1)
+    print(sum2)
 
 
 
