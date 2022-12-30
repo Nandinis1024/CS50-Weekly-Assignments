@@ -15,7 +15,7 @@ def main():
 
         elif(i % 2 == 0):
             digit2 = number % 10
-            sum2 = sum2 + digit2
+            sum2 = sum2 + (digit2 *2)
 
 
         number = int(number /  (pow(10,i)))
