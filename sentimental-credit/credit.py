@@ -13,6 +13,18 @@ def main():
             digit1 = number % pow(10,i)
             sum1 = sum1 + digit1
 
+        elif(i % 2 == 0):
+            digit2 = number % pow(10,i)
+            sum2 = sum2 + digit2
+
+        i = i + 1
+        number = number %  10
+
+    print(sum1)
+    print(sum2)
+
+
+
 
 
 
