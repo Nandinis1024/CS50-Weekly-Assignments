@@ -21,7 +21,11 @@ def main():
         number = int(number /  (pow(10,i)))
         i = i + 1
 
-    
+
+    print(sum1 + 1)
+    print(sum2 + 2)
+
+
 
     if (((sum1 + 1) + (sum2 + 2)) % 10 != 0):
         print("INVALID")
