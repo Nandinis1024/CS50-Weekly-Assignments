@@ -17,8 +17,9 @@ def main():
             digit2 = number % 10
             sum2 = sum2 + digit2
 
+
+        number = number /  pow(10,i)
         i = i + 1
-        number = number %  10
 
     print(sum1)
     print(sum2)
