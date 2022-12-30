@@ -1,6 +1,7 @@
 # TODO
 from cs50 import get_string
 
+
 def main():
 
     text = get_string("text: ")
@@ -49,7 +50,7 @@ def count_words(text):
 
 def count_sentences(text):
 
-    count  = 0
+    count = 0
     for c in text:
         if c == '.' or c == '!' or c == '?':
             count = count + 1
