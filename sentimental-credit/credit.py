@@ -22,7 +22,7 @@ def main():
         i = i + 1
 
     print(sum1 + 1)
-    print(sum2 + 1)
+    print(sum2 + 2)
 
 
 
