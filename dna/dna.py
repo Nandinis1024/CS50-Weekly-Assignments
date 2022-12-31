@@ -36,7 +36,7 @@ def main():
 
     # TODO: Check database for matching profiles
     for i in profile:
-        for j in range(1, database):
+        for j in database:
             if i == j:
                 continue
             else:
