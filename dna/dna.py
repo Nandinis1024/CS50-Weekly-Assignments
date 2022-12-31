@@ -38,8 +38,11 @@ def main():
         for i in subsequence:
             if int(buddy[i]) == profile[i]:
                 match = match + 1
-               
+        if match == len(subsequence):
+            print(buddy["name"])
+            return
 
+    print("n")
 
 
 def longest_match(sequence, subsequence):
