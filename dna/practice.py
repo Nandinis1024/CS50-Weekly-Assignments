@@ -5,7 +5,7 @@ import sys
 profiles = []
 file = "/workspaces/114241516/dna/databases/small.csv"
 with open(file) as database:
-        reader = csv.DictReader(database)
+        reader_obj = csv.reader(database)
 
 
         for row in reader_obj[1:]:
