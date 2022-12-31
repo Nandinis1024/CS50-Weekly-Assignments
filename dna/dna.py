@@ -19,11 +19,11 @@ def main():
 
 
     # TODO: Read DNA sequence file into a variable
-    sequence = []
+    seq = []
     filename2 = sys.argv[2]
     with open(filename2) as file2:
         for row in file2:
-            sequence.append(row)
+            seq.append(row)
 
 
     # TODO: Find longest match of each STR in DNA sequence
@@ -71,4 +71,4 @@ def longest_match(sequence, subsequence):
     return longest_run
 
 
-main()
+ma
