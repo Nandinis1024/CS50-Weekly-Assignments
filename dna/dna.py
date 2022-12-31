@@ -42,7 +42,7 @@ def main():
             print(buddy["name"])
             return
 
-    print("n")
+    print("No match")
 
 
 def longest_match(sequence, subsequence):
