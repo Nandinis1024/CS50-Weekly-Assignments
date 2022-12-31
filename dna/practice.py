@@ -2,14 +2,9 @@ import csv
 import sys
 
 
-profiles = []
-file = "/workspaces/114241516/dna/databases/small.csv"
-with open(file) as database:
-        reader = csv.reader(database)
-
-
+database = []
+    filename1 = sys.argv[1]
+    with open(filename1) as file:
+        reader = csv.DictReader(file)
         for row in reader:
-            # Add person to profiles
-            profiles.append(row)
-
-print (profiles)
+            database.append(row) n
