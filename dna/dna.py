@@ -31,7 +31,6 @@ def main():
         profile[i] = longest_match(sequence, i)
 
 
-
     # TODO: Check database for matching profiles
     for buddy in database:
         match = 0
