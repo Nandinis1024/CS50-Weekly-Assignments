@@ -34,13 +34,13 @@ def main():
 
     # TODO: Check database for matching profiles
     for i in profile:
-        for j in database:
+        for j in database[j].keys()[1:]:
             if i == j:
                 continue
             else:
                 break
 
-    return database[0]['name']
+    return database[j]['name']
 
 
 def longest_match(sequence, subsequence):
