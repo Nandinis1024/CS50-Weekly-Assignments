@@ -8,7 +8,7 @@ with open(file) as database:
         reader = csv.DictReader(database)
 
 
-        for row in reader.fieldnames[1:]:
+        for row in reader:
             # Add person to profiles
             profiles.append(row)
 
