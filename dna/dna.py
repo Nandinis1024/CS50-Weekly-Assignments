@@ -36,7 +36,10 @@ def main():
     for buddy in database:
         match = 0
         for i in subsequence:
-            if int(buddy[i])
+            if int(buddy[i]) == profile[i]:
+                match = match + 1
+               
+
 
 
 def longest_match(sequence, subsequence):
