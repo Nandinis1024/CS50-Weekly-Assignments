@@ -38,9 +38,11 @@ def main():
     for i in profile:
         for j in range(1, database):
             if i == j:
-                
+                continue
+            else:
+                break
 
-    return
+    return 
 
 
 def longest_match(sequence, subsequence):
