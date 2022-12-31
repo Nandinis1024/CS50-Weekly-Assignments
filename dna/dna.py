@@ -28,8 +28,8 @@ def main():
     subsequence = list(database[0].keys())[1:]
     profile = {}
     for i in subsequence:
-        longest_match(sequence, i)
-        profile.append(longest_match(sequence, i))
+        profile[i] = longest_match(sequence, i)
+        
 
 
     # TODO: Check database for matching profiles
