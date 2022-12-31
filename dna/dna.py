@@ -42,7 +42,7 @@ def main():
             else:
                 break
 
-    return 
+    return database[0]['name']
 
 
 def longest_match(sequence, subsequence):
