@@ -1,6 +1,6 @@
-sort1 uses: TODO
+sort1 uses: Bubble Sort
 
-How do you know?: TODO
+How do you know?: Takes slightly less amount of time when running on sorted texts compared to sort3
 
 sort2 uses: TODO
 
