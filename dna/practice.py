@@ -1,9 +1,8 @@
 import csv
 import sys
 
-sequence = []
-filename2 = "/workspaces/114241516/dna/sequences/1.txt"
-with open(filename) as file:
+subsequence =['AGATC','TTTTTTCT','AATG','TCTAG','GATA','TATC','GAAA','TCTG']
+for i in subsequence:
+    print(i)
 
-    for row in file:
-        sequence.append(row)
+
