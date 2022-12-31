@@ -8,7 +8,6 @@ def main():
     if len(sys.argv) != 3:
         sys.exit("Usage: python dna.py data.csv sequence.txt")
 
-
     # TODO: Read database file into a variable
     database = []
     filename1 = sys.argv[1]
@@ -17,19 +16,16 @@ def main():
         for row in reader:
             database.append(row)
 
-
     # TODO: Read DNA sequence file into a variable
     filename2 = sys.argv[2]
     with open(filename2) as file:
         sequence = file.read()
-
 
     # TODO: Find longest match of each STR in DNA sequence
     subsequence = list(database[0].keys())[1:]
     profile = {}
     for i in subsequence:
         profile[i] = longest_match(sequence, i)
-
 
     # TODO: Check database for matching profiles
     for buddy in database:
