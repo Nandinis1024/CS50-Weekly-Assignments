@@ -3,7 +3,7 @@ import sys
 
 
 database = []
-filename1 = 
+filename1 = "/workspaces/114241516/dna/databases/small.csv"
 with open(filename1) as file:
     reader = csv.DictReader(file)
     for row in reader:
