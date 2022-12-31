@@ -29,12 +29,11 @@ def main():
     profile = {}
     for i in subsequence:
         profile[i] = longest_match(sequence, i)
-        
+
 
 
     # TODO: Check database for matching profiles
     for i in profile:
-        j = 0
         for j in database:
             if i == j:
                 continue
