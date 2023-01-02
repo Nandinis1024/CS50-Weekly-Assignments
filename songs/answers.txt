@@ -12,27 +12,30 @@ else if(AVG(energy) + AVG(valence) < AVG(danceability))
 }
 else if(AVG(energy) + AVG(danceability) > AVG(valence))
 {
-    music type/mood: optimistic and filled with wonder
-    aura: pink
+    music type/mood: high-energy, confidence-boosting sounds
+    aura: orange
 
 }
 else if(AVG(danceability) + AVG(valence) > AVG(energy))
 {
-    music type/mood:
-    aura:
+    music type/mood: optimistic and filled with wonder
+    aura: pink
 
 }
 else if(AVG(energy) + AVG(danceability) < AVG(valence))
 {
-    music type/mood:
-    aura:
+    music type/mood:  focused and motivated
+    aura: yellow
 
 }
 else if(AVG(danceability) + AVG(valence) < AVG(energy))
 {
-    music type/mood:
-    aura: 
+    music type/mood: emotional
+    aura: blue
 
 }
+
+
+//no, i believe determining a human,s aura is way more complicated than just the one based on my assumption of a simple calculation. we must consider more factors such as the number of streams of a particular song.
 
 
