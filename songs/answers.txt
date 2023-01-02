@@ -1,9 +1,33 @@
 We calculate the AVG(energy), AVG(valence) and AVG(danceability);
 if(AVG(energy) + AVG(valence) > AVG(danceability))
-else if(AVG(energy) + AVG(valence) > AVG(danceability))
+{
+    music type/mood: get amped up, entertained, and moving
+    aura: purple
+
+}
+else if(AVG(energy) + AVG(valence) < AVG(danceability))
+{
+    music type/mood: calm, analytical, and introspective
+    aura: green
+}
 else if(AVG(energy) + AVG(danceability) > AVG(valence))
+{
+    music type/aura:
+    aura:
+
+}
 else if(AVG(danceability) + AVG(valence) > AVG(energy))
-else if(AVG(energy) + AVG(valence) > AVG(danceability))
-else if(AVG(energy) + AVG(valence) > AVG(danceability))
+{
+
+
+}
+else if(AVG(energy) + AVG(danceability) < AVG(valence))
+{
+
+}
+else if(AVG(danceability) + AVG(valence) < AVG(energy))
+{
+
+}
 
 
