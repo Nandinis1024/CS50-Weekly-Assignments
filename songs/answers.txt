@@ -12,21 +12,26 @@ else if(AVG(energy) + AVG(valence) < AVG(danceability))
 }
 else if(AVG(energy) + AVG(danceability) > AVG(valence))
 {
-    music type/aura:
-    aura:
+    music type/mood: optimistic and filled with wonder
+    aura: pink
 
 }
 else if(AVG(danceability) + AVG(valence) > AVG(energy))
 {
-
+    music type/mood:
+    aura:
 
 }
 else if(AVG(energy) + AVG(danceability) < AVG(valence))
 {
+    music type/mood:
+    aura:
 
 }
 else if(AVG(danceability) + AVG(valence) < AVG(energy))
 {
+    music type/mood:
+    aura: 
 
 }
 
