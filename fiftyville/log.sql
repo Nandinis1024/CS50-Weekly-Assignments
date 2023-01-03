@@ -39,6 +39,8 @@ SELECT * FROM airports WHERE id = 6;
 SELECT * FROM airports WHERE id = 8;
 --Details of the passengers
 SELECT * FROM passengers WHERE flight_id = 18;
+--review passport details of the suspects to tally
+SELECT * FROM people WHERE name IN ('Diana','Bruce');
 
 
 
