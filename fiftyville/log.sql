@@ -32,6 +32,11 @@ SELECT * FROM phone_calls WHERE caller IN ('(829) 555-5269', '(389) 555-5198', '
 --two suspects remain Diana and Bruce
 --QUERY 9: Look for the details of the eariest flight on 29
 SELECT * FROM flights WHERE year = 2021 AND month = 7 AND day = 29 ORDER BY hour, minute;
+--QUERY 10: determine the city
+SELECT * FROM airports WHERE id = 4;
+--THE CITY IS NEW YORK CITY
+--QUERY 11 passenger details for the flight
+SELECT * FROM passengers WHERE flight_id = 36;
 
 
 
