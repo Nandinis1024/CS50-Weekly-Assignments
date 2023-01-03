@@ -27,6 +27,6 @@ SELECT license_plate FROM people WHERE id IN
 
 ));
 --suspects: Iman, Luca, Diana, Bruce
-
+SELECT transcript FROM interviews  WHERE day = 28 AND month = 7 AND year = 2021;
 
 
