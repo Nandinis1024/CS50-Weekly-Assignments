@@ -35,8 +35,11 @@ SELECT * FROM flights WHERE year = 2021 AND month = 7 AND day = 29;
 --QUERY 10: Check for the destination airport_id of the earliest flight
 SELECT * FROM airports WHERE id = 6;
 --thief is escaping to Boston
---QUERY 10: Check for the original airport_id of the earliest flight
+--QUERY 11: Check for the original airport_id of the earliest flight
 SELECT * FROM airports WHERE id = 8;
+--Details of the passengers
+SELECT * FROM passengers WHERE flight_id = 18;
+
 
 
 
