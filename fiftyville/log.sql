@@ -19,7 +19,5 @@ SELECT * FROM people WHERE id IN
 
 ));
 --QUERY 7: Tally the license plate from the bakery's record
-SELECT * FROM bakery_security_logs
-JOIN people ON bakery_security_logs.license_plate = people.license_plate
-WHERE year = 2021 AND month = 7 AND day= 28 AND hour = 10;
+
 
