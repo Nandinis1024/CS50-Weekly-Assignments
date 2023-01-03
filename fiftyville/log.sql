@@ -39,7 +39,6 @@ SELECT * FROM airports WHERE id = 4;
 SELECT * FROM passengers WHERE flight_id = 36;
 
 SELECT * FROM people
-JOIN
 WHERE id IN
 (SELECT person_id FROM bank_accounts WHERE account_number IN
 (
