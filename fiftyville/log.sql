@@ -28,6 +28,6 @@ SELECT license_plate FROM people WHERE id IN
 ));
 --suspects: Iman, Luca, Diana, Bruce
 --QUERY 8: Call details of the 4 suspects
-SELECT * FROM phone_calls WHERE caller IN ('(336) 555-0077', '(918) 555-5327') AND year = 2021 AND month = 7 AND day = 28;
+SELECT * FROM phone_calls WHERE caller IN ('(829) 555-5269', '(389) 555-5198') AND year = 2021 AND month = 7 AND day = 28;
 
 
