@@ -37,10 +37,12 @@ SELECT * FROM airports WHERE id = 6;
 --thief is escaping to Boston
 --QUERY 11: Check for the original airport_id of the earliest flight
 SELECT * FROM airports WHERE id = 8;
---Details of the passengers
+--QUERY 12: Details of the passengers
 SELECT * FROM passengers WHERE flight_id = 18;
---review passport details of the suspects to tally
+--QUERY 13: review passport details of the suspects to tally
 SELECT * FROM people WHERE name IN ('Diana','Bruce');
+--QUERY 14 reveal the name of the accomplice
+SELECT * FROM people WHERE phone_number = '(725) 555-3243';
 
 
 
