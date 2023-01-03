@@ -35,16 +35,14 @@ SELECT * FROM flights WHERE year = 2021 AND month = 7 AND day = 29 ORDER BY hour
 --QUERY 10: determine the city
 SELECT * FROM airports WHERE id = 4;
 --THE CITY IS NEW YORK CITY
---QUERY 11 passenger details for the flight
+--QUERY 11: passenger details for the flight
 SELECT * FROM passengers WHERE flight_id = 36;
+--QUERY 12: compare suspect details with passengers details
+SELECT * FROM people WHERE name IN ('Diana', 'Bruce');
+--QUERY 13: details of the accomplice
+SELECT * FROM people WHERE phone_number = '(375) 555 8161';
 
-SELECT * FROM people
-WHERE id IN
-(SELECT person_id FROM bank_accounts WHERE account_number IN
-(
-    SELECT account_number FROM atm_transactions WHERE year = 2021 AND month = 7 AND day = 28 AND atm_location = 'Leggett Street' AND transaction_type = 'withdraw'
 
-));
 
 
 
