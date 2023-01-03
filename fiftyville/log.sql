@@ -27,6 +27,7 @@ SELECT license_plate FROM people WHERE id IN
 
 ));
 --suspects: Iman, Luca, Diana, Bruce
-
+--QUERY 8: Call details of the 4 suspects
+SELECT * FROM phone_calls WHERE caller IN('Iman','Luca','Diana','Bruce') AND year = 2021 AND month = 7 AND day = 28;
 
 
