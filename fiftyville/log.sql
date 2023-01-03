@@ -31,8 +31,7 @@ SELECT license_plate FROM people WHERE id IN
 SELECT * FROM phone_calls WHERE caller IN ('(829) 555-5269', '(389) 555-5198', '(770) 555-1861', '(367) 555-5533') AND year = 2021 AND month = 7 AND day = 28 AND duration <= 60;
 --two suspects remain Diana and Bruce
 --QUERY 9: Look for the details of the eariest flight on 29
-SELECT * FROM flights WHERE year = 2021 AND month = 7 AND day = 29;
---QUERY 10: Check for the destination airport_id of the earliest flight
+SELECT * FROM flights WHERE year = 2021 AND month = 7 AND day = 29 ORDER BY hour, minute;
 
 
 
