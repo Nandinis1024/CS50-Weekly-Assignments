@@ -27,3 +27,4 @@ SELECT license_plate FROM people WHERE id IN
 
 ));
 
+
