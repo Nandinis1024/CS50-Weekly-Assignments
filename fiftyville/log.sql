@@ -6,4 +6,6 @@ SELECT * FROM crime_scene_reports WHERE day = 28 AND month = 7 AND year = 2021 A
 SELECT * FROM interviews  WHERE day = 28 AND month = 7 AND year = 2021;
 --QUERY 3: To check the bakery_security_logs within 10:15-10:25 time frame
 SELECT * FROM bakery_security_logs WHERE year = 2021 AND month = 7 AND day= 28 AND hour = 10
+--QUERY 4: To check the atm_transaction
+SELECT * FROM atm_transactions WHERE year = 2021 AND month = 7 AND day = 28 AND atm_location = 'Leggett Street';
 
