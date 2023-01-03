@@ -39,8 +39,10 @@ SELECT * FROM airports WHERE id = 4;
 SELECT * FROM passengers WHERE flight_id = 36;
 --QUERY 12: compare suspect details with passengers details
 SELECT * FROM people WHERE name IN ('Diana', 'Bruce');
+--BRUCE IS THE THIEF AS THEIR DETAILS MATCH ALLTOGETHER
 --QUERY 13: details of the accomplice
-SELECT * FROM people WHERE phone_number = '(375) 555 8161';
+SELECT * FROM people WHERE phone_number = '(375) 555-8161';
+--ROBIN IS THE ACCOMPLICE!
 
 
 
