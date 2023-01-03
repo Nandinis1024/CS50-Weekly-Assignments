@@ -26,5 +26,7 @@ SELECT license_plate FROM people WHERE id IN
     SELECT account_number FROM atm_transactions WHERE year = 2021 AND month = 7 AND day = 28 AND atm_location = 'Leggett Street' AND transaction_type = 'withdraw'
 
 ));
+--suspects: Iman, Luca, Diana, Bruce
+
 
 
