@@ -32,17 +32,16 @@
             </div>
         </div>
        <script>
-        
-        for (var i = 0; i < document.querySelectorAll("button").length; i++) {
-    document.querySelectorAll("button")[i].addEventListener("click", function(){
+        for (let i = 0; i < document.querySelectorAll("button").length; i++) {
+        document.querySelectorAll("button")[i].addEventListener("click", function(){
+
+            this.style.backgroundColor = '#ff0000';
+
+        });
+
+    }
 
 
-
-        document.querySelectorAll("button").style.color = "#ff0000";
-
-    });
-
-}
        </script>
     </body>
 </html>
