@@ -46,12 +46,5 @@ def index():
         people = db.execute("SELECT * FROM birthdays")
         return render_template("index.html", people=people)
 
-@app.route("/", methods=["POST"])
-def deregister():
 
-    # Forget registrant
-    id = request.form.get("id")
-    if id:
-        db.execute("DELETE FROM birthdays WHERE id = ?", id)
-    return redirect("/")
 
