@@ -28,6 +28,12 @@ def after_request(response):
 @app.route("/", methods=["GET", "POST"])
 def index():
     if request.method == "POST":
+
+        id = request.form.get("id")
+        if id:
+            db.execute("DELETE FROM registrants WHERE id = ?", id)
+        return redirect("/registrants")
+        
         # TODO: Add the user's entry into the database
         name = request.form.get("name")
         month = request.form.get("month")
