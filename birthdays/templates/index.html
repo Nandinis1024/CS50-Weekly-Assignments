@@ -35,8 +35,11 @@
                     </thead>
                     <tbody>
                         <!-- TODO: Loop through the database entries to display them in this table -->
-
-                    
+                        { for person in people }
+                    <tr>
+                    <td>{{ person.name }}</td>
+                    <td>{{ person.month }}</td>
+                    </tr>
                     </tbody>
                 </table>
             </div>
