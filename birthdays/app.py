@@ -37,8 +37,8 @@ def index():
     else:
 
         # TODO: Display the entries in the database on index.html
-        
 
-        return render_template("index.html", people = people)
+
+        return render_template("index.html")
 
 
