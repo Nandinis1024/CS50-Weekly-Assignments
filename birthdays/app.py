@@ -28,7 +28,7 @@ def index():
 
         id = request.form.get("id")
         if id:
-            db.execute("DELETE FROM registrants WHERE id = ?", id)
+            db.execute("DELETE FROM birthdays WHERE id = ?", id)
         return redirect("/")
 
         # TODO: Add the user's entry into the database
