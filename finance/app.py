@@ -60,14 +60,19 @@ def history():
 def register():
     """register the user"""
     if request.method == "POST":
+        username_check = db.execute("SELECT * FROM users WHERE username = ?", request.form.get("username"))
         # Ensure username was submitted
         if not request.form.get("username"):
             return apology("must provide username", 403)
 
+
+        elif len(username_check) != 1:
+            return apology("username already taken", 403)
+
         # Ensure password was submitted
         elif not request.form.get("password"):
             return apology("must provide password", 403)
-            
+
 
         elif request.form.get("password")!=request.form.get("confirmation"):
             return apology("passwords donot match", 403)
