@@ -58,6 +58,7 @@ def history():
 
 @app.route("/register", methods=["POST"])
 def register():
+    session.clear()
     """register the user"""
     if request.method == "POST":
         # Ensure username was submitted
