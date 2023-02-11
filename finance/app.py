@@ -56,7 +56,7 @@ def history():
     """Show history of transactions"""
     return apology("TODO")
 
-@app.route("/register", methods=["GET", "POST"])
+@app.route("/register", methods=["POST"])
 def register():
     """register the user"""
     if request.method == "POST":
