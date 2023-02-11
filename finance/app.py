@@ -69,7 +69,8 @@ def register():
             return apology("must provide password", 403)
 
         else:
-            db.execute("INSERT INTO users (username, month, day) VALUES(?, ?, ?)", name, month, day)
+            hash = generate_password_hash()
+            db.execute("INSERT INTO users (username, hash) VALUES(?, ?)", username, hash)
 
 
 
