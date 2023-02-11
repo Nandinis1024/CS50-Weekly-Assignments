@@ -68,22 +68,12 @@ def register():
         elif not request.form.get("password"):
             return apology("must provide password", 403)
 
-        # Query database for username
-        rows = db.execute("SELECT * FROM users WHERE username = ?", request.form.get("username"))
+        else:
+            
 
-        # Ensure username exists and password is correct
-        if len(rows) != 1 or request.form.get("password")!= request.form.get("confirmation"):
-            return apology("invalid username and/or password", 403)
 
-        # Remember which user has logged in
-        session["user_id"] = rows[0]["id"]
 
-        # Redirect user to home page
-        return redirect("/")
 
-    # User reached route via GET (as by clicking a link or via redirect)
-    else:
-        return render_template("register.html")
 
 
 
