@@ -56,6 +56,8 @@ def history():
     """Show history of transactions"""
     return apology("TODO")
 
+@app.route("/register")
+
 
 @app.route("/login", methods=["GET", "POST"])
 def login():
