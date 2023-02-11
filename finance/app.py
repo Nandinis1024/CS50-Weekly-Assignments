@@ -57,6 +57,9 @@ def history():
     return apology("TODO")
 
 @app.route("/register")
+def register():
+    """register the user"""
+    
 
 
 @app.route("/login", methods=["GET", "POST"])
