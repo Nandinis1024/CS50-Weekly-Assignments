@@ -59,6 +59,8 @@ def history():
 @app.route("/register", methods=["GET", "POST"])
 def register():
     """register the user"""
+    rows = db.execute("SELECT * FROM users WHERE username = ?", request.form.get("username"))
+
     if request.method == "POST":
         # Ensure username was submitted
         if not request.form.get("username"):
@@ -71,6 +73,7 @@ def register():
 
         elif request.form.get("password")!=request.form.get("confirmation"):
             return apology("passwords do not match", 403)
+
 
         else:
             hash = generate_password_hash(request.form.get("password"))
