@@ -59,7 +59,8 @@ def history():
 @app.route("/register")
 def register():
     """register the user"""
-    
+    if request.method == "POST":
+        
 
 
 @app.route("/login", methods=["GET", "POST"])
