@@ -65,8 +65,13 @@ def register():
             return apology("must provide username", 403)
 
         # Ensure password was submitted
-        elif not request.form.get("password") or request.form.get("password")!= request.form.get("confirmation"):
+        elif not request.form.get("password"):
             return apology("must provide password", 403)
+            
+
+        elif request.form.get("password")!=request.form.get("confirmation"):
+            return apology("passwords donot match", 403)
+
 
         else:
             hash = generate_password_hash(request.form.get("password"))
