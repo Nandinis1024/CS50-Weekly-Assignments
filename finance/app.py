@@ -65,10 +65,6 @@ def register():
         if not request.form.get("username"):
             return apology("must provide username", 400)
 
-        # Check is username already taken
-        rows = db.execute("SELECT * FROM users WHERE username = :username", username=username)
-        if len(rows) != 1:
-            return apology("Username already taken")
 
 
         # Ensure password was submitted
