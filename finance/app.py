@@ -40,22 +40,13 @@ def after_request(response):
 @login_required
 def index():
     """Show portfolio of stocks"""
-    shares = int(request.form.get("shares"))
-    symbol = request.form.get("symbol")
-    item = lookup(symbol)
-    cash = db.execute("SELECT cash FROM users WHERE id = ?", user_id)[0]["cash"]
-
-    item_name = item["name"]
-    item_price = item["price"]
-    total_price = item_price * shares
-
-
 
     user_id = session["user_id"]
+    cash = db.execute("SELECT cash FROM users WHERE id = ?", user_id)[0]["cash"]
     profile_1 = db.execute("SELECT * FROM transactions")
-    profile_2 = db.execute("SELECT * FROM users")
 
-    return redirect_template("index.html", profile_1 = profile_1, profile_2 = profile_2)
+
+    return redirect_template("index.html", profile_1 = profile_1, cash = cash)
 
 
 @app.route("/buy", methods=["GET", "POST"])
