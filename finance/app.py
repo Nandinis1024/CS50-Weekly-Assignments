@@ -67,9 +67,16 @@ def buy():
             return apology("shares must be positive")
 
         user_id = session("user_id")
+        cash = db.execute("SELECT cash FROM users WHERE id = ?", user_id)[0]["cash"]
+
         item_name = item[name]
         item_price = item[price]
-        
+        total_price = item_price * shares
+        if cash < total_price:
+            return apology("not enough cash")
+        else:
+            db.execute("UPDATE users SET cash = ? WHERE id = ?", cash - total_price, user_id)
+            db.execute("INSERT INTO transactions(user_id, name, shares, price, type, symbol) VALUES")
         return redirect("/")
     else:
         return render_template("buy.html")
