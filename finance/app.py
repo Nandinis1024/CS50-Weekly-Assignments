@@ -52,11 +52,10 @@ def buy():
         symbol = request.form.get("symbol")
         item = lookup(symbol)
         shares = request.form.get("shares")
+        
         if not symbol:
             return apology("please enter a symbol!")
-
-
-        if not item:
+        elif not item:
             return apology("please enter a valid symbol")
 
         if shares < 0:
