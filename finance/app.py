@@ -67,7 +67,7 @@ def register():
 
         # Check is username already taken
         rows = db.execute("SELECT * FROM users WHERE username = :username", username=username)
-        if len(rows != 1):
+        if len(rows) != 0:
             return apology("Username already taken")
 
 
