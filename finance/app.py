@@ -66,7 +66,7 @@ def buy():
         if shares <= 0:
             return apology("shares must be positive")
 
-        return redirect("/")
+        user_id = session("user_id")
     else:
         return render_template("buy.html")
 
