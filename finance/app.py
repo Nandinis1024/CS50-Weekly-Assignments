@@ -203,4 +203,9 @@ def quote():
 @login_required
 def sell():
     """Sell shares of stock"""
-    return apology("TODO")
+    if request.method == "POST":
+        pass
+    else:
+        user_id = sesssion["user_id"]
+        symbols = db.execute("")
+        render_template("sell.html")
