@@ -42,6 +42,11 @@ def index():
     """Show portfolio of stocks"""
     symbol = request.form.get("symbol")
     item = lookup(symbol)
+    cash = db.execute("SELECT cash FROM users WHERE id = ?", user_id)[0]["cash"]
+
+    item_name = item["name"]
+    item_price = item["price"]
+    total_price = item_price * shares
 
 
 
