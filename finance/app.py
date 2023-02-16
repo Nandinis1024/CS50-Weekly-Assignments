@@ -51,15 +51,18 @@ def buy():
     if request.method == "POST":
         symbol = request.form.get("symbol")
         item = lookup(symbol)
-        shares = request.form.get("shares")
-        
+
+
         if not symbol:
             return apology("please enter a symbol!")
         elif not item:
             return apology("please enter a valid symbol")
 
-        if shares < 0:
-            return apology("please enter a valid share")
+        try:
+            shares = int(request.form.get"shares")
+        except:
+            return apology("must be an integer!")
+            
 
         return redirect("/")
     else:
