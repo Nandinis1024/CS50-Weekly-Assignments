@@ -40,7 +40,7 @@ def after_request(response):
 @login_required
 def index():
     """Show portfolio of stocks"""
-    return apology("TODO")
+    
 
 
 @app.route("/buy", methods=["GET", "POST"])
@@ -73,7 +73,7 @@ def buy():
         item_price = item["price"]
         total_price = item_price * shares
 
-        
+
         if cash < total_price:
             return apology("not enough cash")
         else:
