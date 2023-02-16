@@ -66,7 +66,7 @@ def buy():
         if shares <= 0:
             return apology("shares must be positive")
 
-        user_id = session("user_id")
+        user_id = session["user_id"]
         cash = db.execute("SELECT cash FROM users WHERE id = ?", user_id)[0]["cash"]
 
         item_name = item[name]
