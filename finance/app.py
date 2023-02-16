@@ -40,6 +40,7 @@ def after_request(response):
 @login_required
 def index():
     """Show portfolio of stocks"""
+    shares = int(request.form.get("shares"))
     symbol = request.form.get("symbol")
     item = lookup(symbol)
     cash = db.execute("SELECT cash FROM users WHERE id = ?", user_id)[0]["cash"]
