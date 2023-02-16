@@ -46,7 +46,7 @@ def index():
     profile_1 = db.execute("SELECT * FROM transactions")
 
 
-    return redirect_template("index.html", profile_1 = profile_1, cash = cash)
+    return render_template("index.html", profile_1 = profile_1, cash = cash)
 
 
 @app.route("/buy", methods=["GET", "POST"])
