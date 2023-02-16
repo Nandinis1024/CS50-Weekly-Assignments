@@ -67,6 +67,8 @@ def buy():
             return apology("shares must be positive")
 
         user_id = session("user_id")
+        item_name = item[name]
+        item_price = item[price]
         
         return redirect("/")
     else:
