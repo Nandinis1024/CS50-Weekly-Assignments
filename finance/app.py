@@ -59,7 +59,7 @@ def buy():
             return apology("please enter a valid symbol")
 
         try:
-            shares = int(request.form.get"shares")
+            shares = int(request.form.get("shares"))
         except:
             return apology("shares must be an integer!")
 
