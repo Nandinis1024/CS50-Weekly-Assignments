@@ -150,8 +150,8 @@ def quote():
         if not item:
             return apology("please enter a valid symbol")
 
-        return render_template("quoted.html")
-        
+        return render_template("quoted.html", item=item,)
+
     else:
         return render_template("quote.html")
 
