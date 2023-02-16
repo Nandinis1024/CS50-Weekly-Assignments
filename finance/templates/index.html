@@ -33,7 +33,7 @@
 
                 </td>
                 <td>
-                    {{cash}} - ({{data.shares*data.price}})
+                    {{cash - (data.shares*data.price)}}
                 </td>
             </tr>
             {% endfor %}
