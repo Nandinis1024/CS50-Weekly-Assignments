@@ -40,8 +40,11 @@ def after_request(response):
 @login_required
 def index():
     """Show portfolio of stocks"""
-    
-    return redirect_template("index.html")
+    user_id = session["user_id"]
+    profile_1 = db.execute("SELECT * FROM transactions")
+    profile_2 = db.execute("SELECT * FROM users")
+
+    return redirect_template("index.html", profile_1 = profile_1, profile_2 = profile_2)
 
 
 @app.route("/buy", methods=["GET", "POST"])
