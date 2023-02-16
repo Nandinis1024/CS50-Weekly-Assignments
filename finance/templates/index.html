@@ -23,17 +23,17 @@
                     {{data.shares}}
                 </td>
                 <td>
-                    {{data.price}}
+                    {{usd(data.price)}}
                 </td>
                 <td>
-                    {{data.shares * data.price}}
+                    {{usd(data.shares * data.price)}}
                 </td>
                 <td>
-                    {{cash}}
+                    {{usd(cash)}}
 
                 </td>
                 <td>
-                    {{cash - (data.shares*data.price)}}
+                    {{usd(cash - (data.shares*data.price))}}
                 </td>
             </tr>
             {% endfor %}
