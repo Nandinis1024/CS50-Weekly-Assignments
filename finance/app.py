@@ -40,6 +40,11 @@ def after_request(response):
 @login_required
 def index():
     """Show portfolio of stocks"""
+    symbol = request.form.get("symbol")
+    item = lookup(symbol)
+
+
+
     user_id = session["user_id"]
     profile_1 = db.execute("SELECT * FROM transactions")
     profile_2 = db.execute("SELECT * FROM users")
