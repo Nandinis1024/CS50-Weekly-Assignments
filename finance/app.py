@@ -73,17 +73,17 @@ def register():
 
 
         # Ensure password was submitted
-        elif not request.form.get("password"):
+        if not request.form.get("password"):
             return apology("must provide password", 400)
 
-        elif request.form.get("password")!=request.form.get("confirmation"):
+        if request.form.get("password")!=request.form.get("confirmation"):
             return apology("passwords do not match", 400)
 
 
-        else:
-            hash = generate_password_hash(request.form.get("password"))
-            db.execute("INSERT INTO users (username, hash) VALUES(?, ?)", request.form.get("username"), hash)
-            return redirect("/login")
+
+        hash = generate_password_hash(request.form.get("password"))
+        db.execute("INSERT INTO users (username, hash) VALUES(?, ?)", request.form.get("username"), hash)
+        return redirect("/login")
     else:
         return render_template("register.html")
 
