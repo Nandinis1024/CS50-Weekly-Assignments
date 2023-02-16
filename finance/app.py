@@ -207,5 +207,5 @@ def sell():
         pass
     else:
         user_id = sesssion["user_id"]
-        symbols = db.execute("")
+        symbols = db.execute("SELECT symbol FROM transactions WHERE user_id = ? GROUP BY symbol", user_id)
         render_template("sell.html")
