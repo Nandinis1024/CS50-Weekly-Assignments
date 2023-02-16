@@ -72,6 +72,8 @@ def buy():
         item_name = item["name"]
         item_price = item["price"]
         total_price = item_price * shares
+
+        
         if cash < total_price:
             return apology("not enough cash")
         else:
