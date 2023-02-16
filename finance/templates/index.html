@@ -13,9 +13,14 @@
     </thead>
 
     <tbody>
-        <td>
-            
-        </td>
+
+            {% for data in profile_1 %}
+            <tr>
+                <td>
+                    {{data.name}}
+                </td>
+            </tr>
+
     </tbody>
 </table>
 
