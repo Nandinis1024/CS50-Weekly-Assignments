@@ -1,0 +1,53 @@
+{% extends "layout.html" %}
+
+{% block title %}
+    history
+{% endblock %}
+
+{% block main %}
+<div>
+<table class="table">
+    <thead>
+        <tr>
+            <th>Symbol</th> <th>Name</th> <th>Shares</th> <th>Price</th> <th>TOTAL</th>
+        </tr>
+    </thead>
+
+    <tbody>
+
+            {% for data in profile_1 %}
+            <tr>
+                <td>
+                    {{data["symbol"]}}
+                </td>
+                <td>
+                    {{data["name"]}}
+                </td>
+                <td>
+                    {{data["TotalShares"]}}
+                </td>
+                <td>
+                    {{usd(data["price"])}}
+
+                </td>
+                <td>
+                    {{usd(data["TotalShares"] * data["price"])}}
+
+                </td>
+            </tr>
+            {% endfor %}
+            <tr>
+                <td>CASH</td>
+                <td colspan="3"></td>
+                <td>{{usd(cash)}}</td>
+            </tr>
+
+    </tbody>
+    <tfoot>
+        <td colspan="4"></td>
+        <td> <strong>{{usd(total)}}</strong></td>
+    </tfoot>
+</table>
+</div>
+
+{% endblock %}
