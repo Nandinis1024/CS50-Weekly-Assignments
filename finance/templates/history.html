@@ -9,13 +9,13 @@
 <table class="table">
     <thead>
         <tr>
-            <th>Symbol</th> <th>Name</th> <th>Shares</th> <th>Price</th> <th>TOTAL</th>
+            <th>Symbol</th> <th>Name</th> <th>Shares</th> <th>Price</th> <th>Type</th> <th>Time</th>
         </tr>
     </thead>
 
     <tbody>
 
-            {% for data in profile_1 %}
+            {% for data in stocks %}
             <tr>
                 <td>
                     {{data["symbol"]}}
