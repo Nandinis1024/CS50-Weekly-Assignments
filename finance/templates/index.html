@@ -5,10 +5,11 @@
 {% endblock %}
 
 {% block main %}
-<table>
+<div>
+<table class="table">
     <thead>
         <tr>
-            <th>name</th> <th>shares</th> <th>price</th> <th>total</th> <th>cash</th> <th>grand total</th>
+            <th>Symbol</th> <th>Name</th> <th>Shares</th> <th>Price</th> <th>TOTAL</th>
         </tr>
     </thead>
 
@@ -17,28 +18,36 @@
             {% for data in profile_1 %}
             <tr>
                 <td>
-                    {{data.name}}
+                    {{data["symbol"]}}
                 </td>
                 <td>
-                    {{data.shares}}
+                    {{data["name"]}}
                 </td>
                 <td>
-                    {{usd(data.price)}}
+                    {{data["TotalShares"]}}
                 </td>
                 <td>
-                    {{usd(data.shares * data.price)}}
-                </td>
-                <td>
-                    {{usd(cash)}}
+                    {{usd(data["price"])}}
 
                 </td>
                 <td>
-                    {{usd(cash - (data.shares*data.price))}}
+                    {{usd(data["TotalShares"] * data["price"])}}
+
                 </td>
             </tr>
             {% endfor %}
+            <tr>
+                <td>CASH</td>
+                <td colspan="3"></td>
+                <td>{{usd(cash)}}</td>
+            </tr>
 
     </tbody>
+    <tfoot>
+        <td colspan="4"></td>
+        <td> <strong>{{usd(total)}}</strong></td>
+    </tfoot>
 </table>
+</div>
 
 {% endblock %}

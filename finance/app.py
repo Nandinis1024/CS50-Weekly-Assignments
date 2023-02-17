@@ -42,11 +42,14 @@ def index():
     """Show portfolio of stocks"""
 
     user_id = session["user_id"]
+
+    profile_1 = db.execute("SELECT symbol, name, price, SUM(shares) as TotalShares FROM transactions WHERE user_id = ? GROUP BY symbol",user_id)
     cash = db.execute("SELECT cash FROM users WHERE id = ?", user_id)[0]["cash"]
-    profile_1 = db.execute("SELECT * FROM transactions")
+    total = cash
+    for data in profile_1:
+        total += data["price"] * data["TotalShares"]
 
-
-    return render_template("index.html", profile_1 = profile_1, cash = cash, usd=usd)
+    return render_template("index.html", profile_1 = profile_1, cash = cash, usd=usd, total = total)
 
 
 @app.route("/buy", methods=["GET", "POST"])
@@ -204,7 +207,28 @@ def quote():
 def sell():
     """Sell shares of stock"""
     if request.method == "POST":
-        pass
+        user_id = session["user_id"]
+        symbol = request.form.get("symbol")
+        shares = int(request.form.get("shares"))
+
+        if shares <= 0:
+            return apology("must be positive")
+
+        item_price = lookup(symbol)["price"]
+        item_name = lookup(symbol)["name"]
+        price = item_price * shares
+
+        shares_owned = db.execute("SELECT shares FROM transactions WHERE user_id = ? AND symbol = ? GROUP BY symbol", user_id, symbol)[0]["shares"]
+
+        if shares_owned < shares:
+            return apology("not enough shares")
+
+        current_cash = db.execute("SELECT cash FROM users WHERE id = ?", user_id)[0]["cash"]
+        db.execute("UPDATE users SET cash = ? WHERE id = ?", current_cash + price, user_id)
+        db.execute("INSERT INTO transactions(user_id, name, shares, price, type, symbol) VALUES(?, ?, ?, ?, ?, ?)", user_id, item_name, -shares, item_price, "sell", symbol)
+        return redirect("/")
+
+
     else:
         user_id = session["user_id"]
         symbols = db.execute("SELECT symbol FROM transactions WHERE user_id = ? GROUP BY symbol", user_id)
